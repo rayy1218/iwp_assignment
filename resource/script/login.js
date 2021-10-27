@@ -1,4 +1,4 @@
-function init() {
+function initLogin() {
     let login_panel_node = document.getElementById("login_panel");
     login_panel_node.innerHTML =
         "<p>User status: <span id=\"user_status\"></span></p><br/>" +
