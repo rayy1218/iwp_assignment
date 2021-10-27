@@ -3,9 +3,10 @@ Use an IDE/Github Desktop to handle for you or
 
 Use cmd
 1. cd to desire directory
-2. clone it to a directory
+2. clone it to a directory and change directory into the repository
 ```
 git clone https://github.com/rayy1218/iwp_assignment
+cd iwp_assignment
 ```
 3. add remote
 ```
