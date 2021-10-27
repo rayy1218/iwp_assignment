@@ -9,7 +9,7 @@ git clone https://github.com/rayy1218/iwp_assignment
 ```
 3. add remote
 ```
-git remote add origin git@github.com/rayy1218/iwp_assignment
+git remote add origin git@github.com:rayy1218/iwp_assignment
 ```
 4. make a branch
 ```
