@@ -1,0 +1,23 @@
+#post-list {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    align-content: space-around;
+}
+
+.post-list-item {
+    width: 90%;
+    height: 120px;
+    border: 2px solid black;
+    margin: 5px 0px 5px 0px;
+    float: left;
+}
+
+.post-list-item img {
+    width: 116px;
+    height: 116px;
+    margin: 2px;
+    float: left;
+}
