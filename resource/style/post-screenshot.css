@@ -1,0 +1,17 @@
+.screenshot-list {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    width: 90%;
+    margin: auto;
+}
+
+.screenshot-item {
+    border: 2px black solid;
+    padding: 10px;
+    margin: 20px;
+}
+
+.screenshot-item > img {
+    width: 100%;
+}
+
