@@ -1,7 +1,12 @@
+#content {
+    width: 90%;
+    margin: auto;
+}
+
 #post-list {
     display: flex;
     flex-flow: column nowrap;
-    width: 90%;
+    width: 100%;
     margin: auto;
     align-items: center;
     align-content: space-around;
@@ -20,4 +25,13 @@
     height: 116px;
     margin: 2px;
     float: left;
+}
+
+.post-anchor {
+    color: black;
+    text-decoration-line: none;
+}
+
+.post-anchor h2 {
+    margin: 5px;
 }
