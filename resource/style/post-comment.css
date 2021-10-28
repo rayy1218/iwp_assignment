@@ -1,0 +1,47 @@
+.comment {
+    margin: 10px 0 10px 0;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.comment-content {
+    float: left;
+    width: 75%;
+}
+
+.username {
+    margin: 5px;
+    font-weight: bold;
+}
+
+#comment-input {
+    margin: auto;
+    padding: 5px;
+    height: 64px;
+}
+
+#comment-input img {
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+
+.comment-content textarea {
+    margin-left: 5px;
+}
+
+#comment-list {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.comment-text {
+    margin: 5px;
+}
+
+
