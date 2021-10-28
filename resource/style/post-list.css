@@ -1,8 +1,3 @@
-#content {
-    width: 90%;
-    margin: auto;
-}
-
 #post-list {
     display: flex;
     flex-flow: column nowrap;
