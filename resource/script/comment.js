@@ -11,8 +11,8 @@ function addComment() {
     }
 
     let comment_text_node = createCommentNode();
-
     comment_text_node.innerText = comment_text;
+    document.getElementById("user-comment-input").value = "";
 }
 
 function createCommentNode() {
