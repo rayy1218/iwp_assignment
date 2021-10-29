@@ -37,4 +37,12 @@
     margin: 5px;
 }
 
+#comment-button {
+    float: none;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+}
 
