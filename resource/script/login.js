@@ -1,36 +1,75 @@
-function initLogin() {
-    let login_panel_node = document.getElementById("login_panel");
-    login_panel_node.innerHTML =
-        "<p>User status: <span id=\"user_status\"></span></p><br/>" +
-        "<input type=\"button\" value=\"login as user\" id=\"login_user_btn\" onclick=\"setLoginStatus(1)\">" +
-        "<input type=\"button\" value=\"login as admin\" id=\"login_admin_btn\" onclick=\"setLoginStatus(2)\">" +
-        "<input type=\"button\" value=\"logout\" id=\"logout_btn\" onclick=\"setLoginStatus(0)\">" +
-        "<br/> <br/>"
-
-    let status = window.sessionStorage.getItem("status");
-    let status_node = document.getElementById("user_status");
-
-    if (status === null) {
-        setLoginStatus("0");
-        return;
-    }
-
-    switch (status) {
-        case "0":
-            status_node.innerText = status + "Non User";
-            break;
-
-        case "1":
-            status_node.innerText = status + "User";
-            break;
-
-        case "2":
-            status_node.innerText = status + "Admin";
-            break;
-    }
-}
+//status: 0(non-user), 1(user), 2(admin)
 
 function setLoginStatus(status_type) {
     window.sessionStorage.setItem("status", status_type.toString());
-    location.reload();
+}
+
+function setUsername(username) {
+    window.sessionStorage.setItem("username", username);
+}
+
+function getLoginStatus() {
+    return window.sessionStorage.getItem("status");
+}
+
+function getUsername() {
+    return window.sessionStorage.getItem("username");
+}
+
+function getLoginStatusString(login_status) {
+    switch (parseInt(login_status)) {
+        case 0:
+            return "Non-user";
+
+        case 1:
+            return "User";
+
+        case 2:
+            return "admin";
+    }
+}
+
+function initLogin() {
+    let status = getLoginStatus();
+    if (status === null) {
+        setLoginStatus("0");
+        location.reload();
+        return;
+    }
+
+    let username = getUsername();
+    if (username === null) {
+        setUsername("null");
+    }
+}
+
+function doRegister() {
+    //may do a password strength check here
+    let username = document.getElementById("uname").value;
+
+    if (username === "admin") {
+        //may do a error message output here
+
+        return;
+    }
+
+    doLogin();
+}
+
+function doLogin() {
+    let username = document.getElementById("uname").value;
+
+    if (username === "admin") {
+        setLoginStatus(2);
+    }
+    else {
+        setLoginStatus(1);
+    }
+
+    setUsername(username);
+}
+
+function doLogout() {
+    setLoginStatus(0);
+    setUsername("null");
 }
