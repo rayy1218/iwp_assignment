@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Edit Page</title>
 </head>
-<body>
+<script>
+    const edit_button = document.getElementById("edit-button");
 
+    edit_button.addEventListener("click", function()
+    {
+        paragraph.contentEditable = true;
+    } )
+
+    
+    function showConfirm()
+    {
+        var con = confirm("Are You Sure You Want to Go Back?");
+
+        if (con == true) 
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>
+<body>
+    <h1>Edit Existing Page</h1>
+    <h2>Please select the page you want to edit.</h2>
+
+    <label for="post_title">Post Titles</label>
+    <select name="post_title" id="post_title">
+        <option>Post 1</option>
+        <option>Post 2</option>
+        <option>Post 3</option>
+        <option>Post 4</option>
+        <option>Post 5</option>
+        <option>Post 6</option>
+        <option>Post 7</option>
+        <option>Post 8</option>
+    </select>
+    <form>
+        <button type="submit" id="edit-button">Edit</button>
+        <button type="submit" id="done-editing">Done</button>
+        <a href="../../pages/post-function/admin/admin_post_list.html"><button type="button" onclick="return showConfirm()">Cancel</button></a>
+    </form>
 </body>
 </html>
