@@ -7,7 +7,7 @@
     <script src="../../resource/script/comment.js"></script>
     <script src="../../resource/script/login.js"></script>
 </head>
-<body onload="initLogin()">
+<body onload="initLogin();">
     <header>
         <div>
             <a href="../../index.html"><h1 class="header-title">Webpage title</h1></a>
@@ -41,6 +41,10 @@
 
             <div class="navigation-tab user">
                 <a href="../../index.html" onclick="doLogout()">Logout</a>
+            </div>
+
+            <div class="navigation-tab">
+                <p id="debug-user-tab"></p>
             </div>
         </nav>
     </header>

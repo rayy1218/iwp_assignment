@@ -61,6 +61,9 @@ function initLogin() {
             non_user_item[i].style.display = "block";
         }
     }
+
+    let user_tab = document.getElementById("debug-user-tab");
+    user_tab.innerHTML = `Status: ${getLoginStatusString(getLoginStatus())} Username: ${getUsername()}`;
 }
 
 function doRegister() {
