@@ -40,6 +40,13 @@ function initLogin() {
         setUsername("null");
     }
 
+    setItemDisplay();
+
+    let user_tab = document.getElementById("debug-user-tab");
+    user_tab.innerHTML = `Status: ${getLoginStatusString(getLoginStatus())} Username: ${getUsername()}`;
+}
+
+function setItemDisplay() {
     let user_item = document.getElementsByClassName("user"),
         non_user_item = document.getElementsByClassName("non-user");
 
@@ -61,9 +68,6 @@ function initLogin() {
             non_user_item[i].style.display = "block";
         }
     }
-
-    let user_tab = document.getElementById("debug-user-tab");
-    user_tab.innerHTML = `Status: ${getLoginStatusString(getLoginStatus())} Username: ${getUsername()}`;
 }
 
 function doRegister() {
