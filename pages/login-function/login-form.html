@@ -34,17 +34,19 @@ button:hover
 	opacity: 0.7;
 }
 </style>
+
+  <script src="../../resource/script/login.js"></script>
 </head>
 <body>
-  <form>
+  <form action="../../index.html">
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username or Email" name="uname" required>
+      <input type="text" placeholder="Enter Username or Email" id="uname" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit" onclick="return doLogin();">Login</button>
     </div>
   </form>
 </body>

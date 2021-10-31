@@ -46,6 +46,14 @@ function initLogin() {
     user_tab.innerHTML = `Status: ${getLoginStatusString(getLoginStatus())} Username: ${getUsername()}`;
 }
 
+function putUsernameOnNode(class_name) {
+    let username_node = document.getElementsByClassName(class_name);
+    for (let i = 0; i < username_node.length; i += 1) {
+        username_node[i].innerHTML = getUsername();
+    }
+
+}
+
 function setItemDisplay() {
     let user_item = document.getElementsByClassName("user"),
         non_user_item = document.getElementsByClassName("non-user");
@@ -72,15 +80,24 @@ function setItemDisplay() {
 
 function doRegister() {
     //may do a password strength check here
+    let password1 = document.getElementById("psw"),
+        password2 = document.getElementById("psw2");
+    if (password1 === password2) {
+        return false;
+    }
+
     let username = document.getElementById("uname").value;
 
     if (username === "admin") {
         //may do a error message output here
 
-        return;
+        return false;
     }
 
-    doLogin();
+    setLoginStatus(1);
+    setUsername(username);
+
+    return true;
 }
 
 function doLogin() {
@@ -94,6 +111,8 @@ function doLogin() {
     }
 
     setUsername(username);
+
+    return true;
 }
 
 function doLogout() {
