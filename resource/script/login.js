@@ -9,7 +9,7 @@ function setUsername(username) {
 }
 
 function getLoginStatus() {
-    return window.sessionStorage.getItem("status");
+    return parseInt(window.sessionStorage.getItem("status"));
 }
 
 function getUsername() {
@@ -31,15 +31,35 @@ function getLoginStatusString(login_status) {
 
 function initLogin() {
     let status = getLoginStatus();
-    if (status === null) {
+    if (status == null) {
         setLoginStatus("0");
-        location.reload();
-        return;
     }
 
     let username = getUsername();
-    if (username === null) {
+    if (username == null) {
         setUsername("null");
+    }
+
+    let user_item = document.getElementsByClassName("user"),
+        non_user_item = document.getElementsByClassName("non-user");
+
+    if (getLoginStatus() === 1 || getLoginStatus() === 2) {
+        for (let i = 0; i < user_item.length; i += 1) {
+            user_item[i].style.display = "block";
+        }
+
+        for (let i = 0; i < non_user_item.length; i += 1) {
+            non_user_item[i].style.display = "none";
+        }
+    }
+    else if (getLoginStatus() === 0) {
+        for (let i = 0; i < user_item.length; i += 1) {
+            user_item[i].style.display = "none";
+        }
+
+        for (let i = 0; i < non_user_item.length; i += 1) {
+            non_user_item[i].style.display = "block";
+        }
     }
 }
 

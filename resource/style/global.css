@@ -39,6 +39,16 @@ header a {
     float: left;
 }
 
+.navigation-tab p {
+    margin: 0;
+}
+
+.navigation-separator {
+    width: 20px;
+    float: left
+}
+
 footer {
 
 }
+
