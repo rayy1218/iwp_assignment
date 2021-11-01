@@ -1,24 +1,142 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Homepage</title>
-  </head>
-  
-  <body>
-    <h1>Homepage</h1>
-    <p>temporary navigation list</p>
-    <ul>
-      <li><a href="./pages/other/about-us.html">About us</a></li>
-      <li><a href="./pages/other/contact.html">Contact</a></li>
-      <li><a href="./pages/other/faq.html">FAQ</a></li>
-      <li><a href="./pages/login-function/login-form.html">Login</a></li>
-      <li><a href="./pages/login-function/register-form.html">Register</a></li>
-      <li><a href="./pages/post-function/post-list.html">Post List</a></li>
-      <li><a href="./pages/post-function/post-comment.html">Post Comment</a></li>
-      <li><a href="./pages/post-function/post-screenshot.html">Post Screenshot</a></li>
-      <li><a href="./pages/post-function/admin/admin_post_list.html">Admin Post List</a></li>
-      <li><a href="./pages/post-function/admin/add-page-form.html">Add page form</a></li>
-      <li><a href="./pages/post-function/admin/edit-page-form.html">Edit page form</a></li>
-    </ul>
-  </body>
+</head>
+<style>
+*
+{
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: Arial;
+    margin: 0;
+	color：#C0B2D6；;
+}
+.header 
+{
+    padding: 80px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+.header h1 
+{
+    font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+.navbar a 
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right 
+{
+    float: right;
+}
+.navbar a:hover 
+{
+    background-color: #dde;
+    color: #C7C7C7;
+}
+.row 
+{  
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.side 
+{
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.main 
+{   
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+.fakeimg 
+{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+.footer 
+{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+@media screen and (max-width: 700px) 
+{
+    .row {   
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) 
+{
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+<body>
+<div class="header">
+<h1>-Name-</h1>
+<p>Game Introduction Web Site</p>
+</div>
+<div class="navbar">
+  <a href="#">Account</a>
+  <a href="#">Post</a>
+  <a href="#">Page</a>
+  <a href="#" class="right">Other</a>
+</div>
+<div class="row">
+  <div class="side">
+      <h2>About Us</h2>
+		<li>
+			<a href="./pages/other/about-us.html">About us</a>
+		</li>
+		<li>
+			<a href="./pages/other/contact.html">Contact</a>
+		</li>
+		<li>
+			<a href="./pages/other/faq.html">FAQ</a>
+		</li>
+</div>
+  <div class="main">
+      <h2>Post-00</h2>
+      <h5>Game Name</h5>
+      <div class="fakeimg" style="height:200px;">Game img</div>
+	  <a href="./pages/post-function/admin/edit-page-form.html">Read more</a>
+      <br>
+	  
+      <h2>Post-01</h2>
+      <h5>Game Name</h5>
+      <div class="fakeimg" style="height:200px;">Game img</div>
+	  <a href="./pages/post-function/admin/edit-page-form.html">Read more</a>
+      <br>
+	  
+	  <h2>Post-02</h2>
+      <h5>Game Name</h5>
+      <div class="fakeimg" style="height:200px;">Game img</div>
+	  <a href="./pages/post-function/admin/edit-page-form.html">Read more</a>
+      <br>
+  </div>
+</div>
+</body>
 </html>
