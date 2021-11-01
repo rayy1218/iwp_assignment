@@ -21,12 +21,21 @@
 
         <div class="navigation-separator">&nbsp</div>
 
-        <div class="navigation-tab">
-            <a src="">Login</a>
+        <div class="navigation-tab non-user">
+            <a href="">Login</a>
+        </div>
+
+        <div class="navigation-tab non-user">
+            <a href="">Register</a>
+        </div>
+
+        <div class="navigation-tab user">
+            <a href="" onclick="doLogout()">Logout</a>
         </div>
 
         <div class="navigation-tab">
-            <a src="">Register</a>
+            <p id="debug-user-tab"></p>
         </div>
+
     </nav>
 </header>

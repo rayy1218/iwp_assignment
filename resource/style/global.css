@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-.username {
+.username, .current_username {
     margin: 5px;
     font-weight: bold;
 }
