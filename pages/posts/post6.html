@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>osu!</title>
+    <link rel="stylesheet" href="../../resource/style/global.css">
+    <script src="../../resource/script/image-control.js"></script>
+    <script>
+        let image = [
+                     "../../resource/img/posts/post6/img1.jpg",
+                     "../../resource/img/posts/post6/img2.jpg",
+                     "../../resource/img/posts/post6/img3.jpg",
+                     "../../resource/img/posts/post6/img4.png",
+                     "../../resource/img/posts/post6/img5.png"
+                    ];
+
+        initImageControl(image);
+    </script>
+    <style>
+        .img-container {
+            width: 60%;
+            margin: 0 auto 0 auto;
+            height: 80%;
+        }
+
+        .post-img {
+            width: 100%;
+            display: block;
+        }
+
+        .img-control-button {
+            width: 50%;
+        }
+
+        #button-container {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 60%;
+            margin: 0 auto 0 auto;
+        }
+    </style>
 </head>
 <body>
+    <div class="content">
+    <h1>osu!</h1>
+        <div id="button-container">
+            <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+            <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+        </div>
+        <div class="img-container">
+            <img src="../../resource/img/posts/post6/img1.jpg" alt="menu" class="post-img" id="image-display">
+        </div>
 
+        <p>
+            osu! is a rhythm game created by Dean "peppy" Herbert.
+        </p>
+        <p>
+            The primary gameplay of osu! is control the cursor to follow the rhythm such as clicking the circle, sliding
+            the bar and rotating the spinner with a mouse, tablet or touch screen.
+        </p>
+        <p>
+            There are also different mode of osu! including osu!mania, osu!taiko and osu!catch that provide different
+            method of gameplay of you to discover.
+        </p>
+        <p>
+            In osu!, all the different song is called "beatmap", which created by different beatmap artist where you can
+            download in the official webpage without worry about suspicious file problem.
+        </p>
+
+        <p>
+            There are also scoring and ranking system in every of the beatmap for players to compete.
+        </p>
+    </div>
 </body>
 </html>
