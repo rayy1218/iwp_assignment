@@ -1,3 +1,10 @@
+/*
+* This script is use to create a frame of image display for numbers of image without spamming <img> tag
+* To use this
+* 1. Declare an array of image source and call initImageControl() function with the array as argument
+* 2. Set event listener for previousImage() and nextImage() for example <button onclick="nextImage()">
+*/
+
 let pointing = 0;
 let image_arr = [];
 
