@@ -43,6 +43,7 @@ function initLogin() {
     setItemDisplay();
 
     let user_tab = document.getElementById("debug-user-tab");
+    if (user_tab == null) {return;}
     user_tab.innerHTML = `Status: ${getLoginStatusString(getLoginStatus())} Username: ${getUsername()}`;
 }
 
