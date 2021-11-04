@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../../resource/style/global.css">
     <link rel="stylesheet" href="../../resource/style/image-control.css">
     <script src="../../resource/script/image-control.js"></script>
+    <script src="../../resource/script/login.js"></script>
     <script>
         let image = [
                      "../../resource/img/posts/post6/img1.jpg",
@@ -13,9 +14,15 @@
                      "../../resource/img/posts/post6/img4.png",
                      "../../resource/img/posts/post6/img5.png"
                     ];
+
+        function initPage() {
+            initLogin();
+            doHideElementOnRole('user-function', 0);
+            initImageControl(image);
+        }
     </script>
 </head>
-<body onload="initImageControl(image);">
+<body onload="initPage();">
     <div class="content">
         <h1>osu!</h1>
         <div id="button-container">
@@ -46,6 +53,11 @@
         <p>
             There are also scoring and ranking system in every of the beatmap for players to compete.
         </p>
+
+        <div class="user-function">
+            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
+        </div>
     </div>
 </body>
 </html>
