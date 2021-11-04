@@ -124,9 +124,9 @@ function doLogout() {
 function doHideElementOnRole(element_classname, role_int) {
     if (getLoginStatus() === role_int) {
         let element_nodes = document.getElementsByClassName(element_classname);
-
-        for (let i = 0; i < element_nodes; i += 1) {
+        for (let i = 0; i < element_nodes.length; i += 1) {
             element_nodes[i].style.display = "none";
+            console.log(element_nodes[i].style.display);
         }
     }
 }
