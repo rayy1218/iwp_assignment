@@ -13,11 +13,9 @@
                      "../../resource/img/posts/post6/img4.png",
                      "../../resource/img/posts/post6/img5.png"
                     ];
-
-        initImageControl(image);
     </script>
 </head>
-<body>
+<body onload="initImageControl(image);">
     <div class="content">
     <h1>osu!</h1>
         <div id="button-container">
@@ -25,7 +23,7 @@
             <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
         </div>
         <div class="img-container">
-            <img src="../../resource/img/posts/post6/img1.jpg" alt="menu" class="post-img" id="image-display">
+            <img src="" alt="post image" class="post-img" id="image-display">
         </div>
 
         <p>
