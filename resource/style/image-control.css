@@ -10,7 +10,7 @@
 }
 
 .img-control-button {
-    width: 50%;
+    width: 40%;
 }
 
 #button-container {
@@ -18,4 +18,10 @@
     flex-flow: row nowrap;
     width: 60%;
     margin: 0 auto 0 auto;
+}
+
+#page-display {
+    width: 20%;
+    text-align: center;
+    border: black 1px solid;
 }
