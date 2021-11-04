@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.container{
+  display: grid;
+  place-items: center;
+}
+.faq_down{
+  margin-bottom:20px;
+}
+.faq_container{
+  width:50%;
+  font-family: 'Montserrat', armenian;
+  text-align: center;
+  
+}
+.drop {
+  background-color: rgb(194, 215, 255);
+  color: rgb(40, 68, 68);
+  cursor: pointer;
+  padding: 19px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  transition: 0.6s;
+}
+
+.active,
+.drop:hover {
+  background-color: #ccc;
+}
+
+.drop:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 4px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 50px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
