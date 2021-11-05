@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GTA V</title>
+}<style>
+*
+{
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: Arial;
+    margin: 0;
+	color: #000000;
+}
+.header 
+{
+    padding: 80px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+.header h1 
+{
+    font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+.navbar a 
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right 
+{
+    float: right;
+}
+.navbar a:hover 
+{
+    background-color: #dde;
+    color: #C7C7C7;
+}
+.row 
+{  
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.side 
+{
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.main 
+{   
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+.info
+{
+	background-color: white;
+	padding: 20px;
+	width:30%;
+    -ms-flex: 70%;
+	border-style:solid;
+	border-width:2px;
+	border-radius:15px;
+}
+.gameplay
+{
+	font-family: italic;
+	width:70%;
+	
+}
+.footer 
+{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+@media screen and (max-width: 700px) 
+{
+    .row {   
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) 
+{
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>=Dummies=</h1>
+<p>Game Introduction Web Site</p>
+</div>
+<div class="navbar">
+  <a href="#">Account</a>
+  <a href="#">Post</a>
+  <a href="#">Page</a>
+  <a href="#" class="right">Other</a>
+</div>
+<div class="row">
+  <div class="side">
+
+		<li>
+			<a href="./pages/other/about-us.html">About us</a>
+		</li>
+		<li>
+			<a href="./pages/other/contact.html">Contact</a>
+		</li>
+		<li>
+			<a href="./pages/other/faq.html">FAQ</a>
+		</li>
+</div>
+  <div class="main">
+  <h2>Grand Theft Auto V</h2>
+	<div class="info">	  
+      <h5>price=US$26.70</h5>
+	  <h5>Platform=Xbox,PC,PlayStation</h5>
+	  <h5>Publisher(s):Rockstar Games</h5>
+	  <h5>Genre(s)=Action-adventure</h5>
+	</div>
+	<br>
+	  <img src="gtav.jpg" width="960" height="540"></img>
+	  <br>
+		
+	<div class="gameplay">	
+		<h3>Gameplay</h3>
+		<h4>Grand Theft Auto V is an action-adventure game played from either a third-person or first-person perspective. 
+		Players complete missions linear scenarios with set objectives to progress through the story.There will be alot of mission to complete in order to 
+		play new mission.Other than playing mission, players can freely roam the open world.
+	  <br><br>
+		Players use weapon to attack enemy.Players control the three lead protagonists throughout 
+		single-player and switch among them, both during and outside missions. They is 3 main character which
+		are Michael De Santa (retired bank robber), Franklin Clinton(street gangster), and Trevor Philips
+		(drug dealer and gunrunner). They will attempt to commit heists while under pressure from a corrupted government agency and powerful criminals.
+
+	  </h4>
+      
+	  </div>
+  </div>
+  
+		<div class="user-function">
+            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
+        </div>
+</div>
+</body>
+</html>
