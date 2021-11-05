@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMONG US</title>
+}<style>
+*
+{
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: Arial;
+    margin: 0;
+	color: #000000;
+}
+.header 
+{
+    padding: 80px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+.header h1 
+{
+    font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+.navbar a 
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right 
+{
+    float: right;
+}
+.navbar a:hover 
+{
+    background-color: #dde;
+    color: #C7C7C7;
+}
+.row 
+{  
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.side 
+{
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.main 
+{   
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+.info
+{
+	background-color: white;
+	padding: 20px;
+	width:30%;
+    -ms-flex: 70%;
+	border-style:solid;
+	border-width:2px;
+	border-radius:15px;
+}
+.gameplay
+{
+	font-family: italic;
+	width:70%;
+	
+}
+.footer 
+{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+@media screen and (max-width: 700px) 
+{
+    .row {   
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) 
+{
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>=Dummies=</h1>
+<p>Game Introduction Web Site</p>
+</div>
+<div class="navbar">
+  <a href="#">Account</a>
+  <a href="#">Post</a>
+  <a href="#">Page</a>
+  <a href="#" class="right">Other</a>
+</div>
+<div class="row">
+  <div class="side">
+
+		<li>
+			<a href="./pages/other/about-us.html">About us</a>
+		</li>
+		<li>
+			<a href="./pages/other/contact.html">Contact</a>
+		</li>
+		<li>
+			<a href="./pages/other/faq.html">FAQ</a>
+		</li>
+</div>
+  <div class="main">
+  <h2>Among Us</h2>
+	<div class="info">	  
+      <h5>Price=US$3.00</h5>
+	  <h5>Platform=Android,iOS,Microsoft Windows,Nintendo Switch,PlayStation,Xbox</h5>
+	  <h5>Publisher(s):Innersloth</h5>
+	  <h5>Genre(s)=Casual</h5>
+	</div>
+	<br>
+	  <img src="among us.jpg" width="960" height="540"></img>
+	  <br>
+		
+	<div class="gameplay">	
+		<h3>Gameplay</h3>
+		<h4>Among Us is a online multiplayer game (four to fifteen players) developed and published by American game studio Innersloth.
+		Up to three players are randomly and secretly chosen to be the Impostor each round. The Imposters has 1 or 2 ways to win the game
+		by killing most of the crew or by sabotaging a critical system on the map. The crewmates can win by completing all the task or by identifying and ejecting
+		all the imposters. 
+		
+	  <br><br>
+		
+		If a Crewmate is killed, they become a ghost. They can pass through walls, spectate other players game and can chat with other ghost. At start of the game, each crewmember 
+		are assign a task to complete such as fixing wires, downloading data and more.Any living players can have a group call by reporting dead body or by pressing the emergency meeting button.
+		
+	  </h4>
+      
+	  </div>
+  </div>
+  
+		<div class="user-function">
+            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
+        </div>
+</div>
+</body>
+</html>
