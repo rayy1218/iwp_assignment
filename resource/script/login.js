@@ -25,18 +25,14 @@ function getLoginStatusString(login_status) {
             return "User";
 
         case 2:
-            return "admin";
+            return "Admin";
     }
 }
 
 function initLogin() {
     let status = getLoginStatus();
-    if (status == null) {
+    if (isNaN(status)) {
         setLoginStatus("0");
-    }
-
-    let username = getUsername();
-    if (username == null) {
         setUsername("null");
     }
 
@@ -122,6 +118,8 @@ function doLogout() {
 }
 
 function doHideElementOnRole(element_classname, role_int) {
+    console.log(getLoginStatus());
+
     if (getLoginStatus() === role_int) {
         let element_nodes = document.getElementsByClassName(element_classname);
         for (let i = 0; i < element_nodes.length; i += 1) {
