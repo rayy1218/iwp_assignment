@@ -107,10 +107,18 @@ body
 {
 	color:black;
 }
-</style
+</style>
+
+	<script src="../../resource/script/login.js"></script>
+	<script>
+		function initPage() {
+			initLogin();
+			doHideElementOnRole("button", 0);
+		}
+	</script>
 </head>
 
-<body>
+<body onload="initPage();">
 
 <div class="header">
 <h1>=Dummies=</h1>
@@ -128,13 +136,13 @@ body
   <div class="side">
       <h2 style="color:black;">About Us</h2>
 		<li>
-			<a href="./pages/other/about-us.html">About us</a>
+			<a href="../other/about-us.html">About us</a>
 		</li>
 		<li>
-			<a href="./pages/other/contact.html">Contact</a>
+			<a href="../other/contact.html">Contact</a>
 		</li>
 		<li>
-			<a href="./pages/other/faq.html">FAQ</a>
+			<a href="../other/faq.html">FAQ</a>
 		</li>
 </div>
 
@@ -181,8 +189,8 @@ body
       
 	  </div>
 	  <div class="button">
-		<button type="submit" onclick="comment_navi();">Comment Here</button>
-		<button type="submit" onclick="screenshot_navi();">Send Screenshot</button>
+		<button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment Here</button>
+		<button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Send Screenshot</button>
 	  </div>
   </div>
 </div>
