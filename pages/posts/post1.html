@@ -73,6 +73,7 @@ body
 	padding: 20px;
 	width:30%;
     -ms-flex: 70%;
+	color:black;
 	border-style:solid;
 	border-width:2px;
 	border-radius:15px;
@@ -102,12 +103,19 @@ body
         width: 100%;
     }
 }
-</style>
+.button
+{
+	color:black;
+}
+</style
 </head>
+
 <body>
+
 <div class="header">
 <h1>=Dummies=</h1>
 <p>Game Introduction Web Site</p>
+
 </div>
 <div class="navbar">
   <a href="#">Account</a>
@@ -115,9 +123,10 @@ body
   <a href="#">Page</a>
   <a href="#" class="right">Other</a>
 </div>
+
 <div class="row">
   <div class="side">
-      <h2>About Us</h2>
+      <h2 style="color:black;">About Us</h2>
 		<li>
 			<a href="./pages/other/about-us.html">About us</a>
 		</li>
@@ -128,21 +137,23 @@ body
 			<a href="./pages/other/faq.html">FAQ</a>
 		</li>
 </div>
+
   <div class="main">
-  <h2>Forza Horizon 4</h2>
+  <h2 style="color:black;">Forza Horizon 4</h2>
 	<div class="info">	  
       <h5>price=US$59.99</h5>
 	  <h5>Platform=Xbox,PC</h5>
 	  <h5>Publisher(s):Microsoft Studios</h5>
 	  <h5>Genre(s)=Racing</h5>
 	</div>
+	
 	<br>
 	  <img src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
 	  <br>
 		
 	<div class="gameplay">	
-		<h3>Gameplay</h3>
-		<h4>Forza Horizon 4 is a racing video game set in an open world environment based in a fictionalised Great Britain,with regions that include condensed representations of Edinburgh,the Lake District (including Derwentwater), Ambleside and the Cotswolds (including Broadway), Bamburgh among others.
+		<h3 style="color:black;">Gameplay</h3>
+		<h4 style="color:black;">Forza Horizon 4 is a racing video game set in an open world environment based in a fictionalised Great Britain,with regions that include condensed representations of Edinburgh,the Lake District (including Derwentwater), Ambleside and the Cotswolds (including Broadway), Bamburgh among others.
 	  The game features a route creator which enables players to create races using completely customized routes.The game takes place in a synchronised shared world,compared to the AI-driven 'drivatars' from its predecessors,with each server supporting up to 72 players.
 	  The game is also playable in offline mode.
 	  <br><br>
@@ -168,6 +179,10 @@ body
 	  On 19 November 2019,the official Forza Motorsport Twitter account announced that Toyota cars would be returning to the Forza series in the Series 17 update of Forza Horizon 4 on 12 December with the release of the 1998 Toyota Supra RZ
 	  </h4>
       
+	  </div>
+	  <div class="button">
+		<button type="submit" onclick="comment_navi();">Comment Here</button>
+		<button type="submit" onclick="screenshot_navi();">Send Screenshot</button>
 	  </div>
   </div>
 </div>
