@@ -107,9 +107,16 @@ body
 {
 	color:black;
 }
-</style
+</style>
+	<script src="../../resource/script/login.js"></script>
+	<script>
+		function initPage() {
+			initLogin();
+			doHideElementOnRole("button", 0);
+		}
+	</script>
 </head>
-<body>
+<body onload="initPage();">
 <div class="header">
 <h1>=Dummies=</h1>
 <p>Game Introduction Web Site</p>
@@ -124,29 +131,30 @@ body
   <div class="side">
       <h2 style="color:black;">About Us</h2>
 		<li>
-			<a href="./pages/other/about-us.html">About us</a>
+			<a href="../other/about-us.html">About us</a>
 		</li>
 		<li>
-			<a href="./pages/other/contact.html">Contact</a>
+			<a href="../other/contact.html">Contact</a>
 		</li>
 		<li>
-			<a href="./pages/other/faq.html">FAQ</a>
+			<a href="../other/faq.html">FAQ</a>
 		</li>
+  </div>
 </div>
   <div class="main">
-  <h2 style="color:black;">Minecraft<h2>
+  <h2 style="color:black;">Minecraft</h2>
 	<div class="info">	  
       <h5>price=US$26.95 </h5>
 	  <h5>Platform=Xbox,PC,Phone,Play Station</h5>
-	  <h5>Publisher(s):Mojang Studios,Xbox Game Studios (Bedrock Edition),4J Studios (Konsoleneditionen),Other Ocean Interactive (New Nintendo 3DS Edition)h5>
+	  <h5>Publisher(s):Mojang Studios,Xbox Game Studios (Bedrock Edition),4J Studios (Konsoleneditionen),Other Ocean Interactive (New Nintendo 3DS Edition)</h5>
 	  <h5>Genre(s)=	Sandbox-Spiel,Survival-Spiel</h5>
 	</div>
 	<br>
-	  <img src="https://www.pcgamesn.com/wp-content/uploads/2018/07/Games-like-Minecraft-header-new.jpg" width="960" height="540"></img>
+	  <img src="https://www.pcgamesn.com/wp-content/uploads/2018/07/Games-like-Minecraft-header-new.jpg" width="960" height="540">
 	  <br>	
 	<div class="gameplay">	
 		<h3 style="color:black;">Gameplay</h3>
-		<h4 style="color:black;">Minecraft is an open world game without a fixed goal. 
+		<h4 style="color:black;">Minecraft is an open world game without a fixed goal.
 		The main focus is on exploring and discovering the game world with its caves and dungeons, as well as building your own buildings and devices. 
 		The player can mine raw materials ("mine"), process them into other objects ("craft") and fight against monsters.However, the game provides a n	umber of tasks (so-called "progress"), which, among other things, should make it easier to get started with the game.
 		Minecraft is played from first person perspective by default, but with the option to switch to third person perspective.
@@ -184,10 +192,9 @@ body
 	  </h4>
 	  </div>
 	  <div class="button">
-		<button type="submit" onclick="comment_navi();">Comment Here</button>
-		<button type="submit" onclick="screenshot_navi();">Send Screenshot</button>
+		<button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment Here</button>
+		<button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Send Screenshot</button>
 	  </div>
-  </div>
 </div>
 </body>
 </html>
