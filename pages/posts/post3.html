@@ -1,9 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Post3</title>
+    <title>CS GO</title>
+    <link rel="stylesheet" href="../../resource/style/global.css">
+    <link rel="stylesheet" href="../../resource/style/image-control.css">
+    <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/image-control.js"></script>
+    <script>
+        let image = [
+                     "../../resource/img/posts/post3/img1.jpg",
+                     "../../resource/img/posts/post3/img2.jpg",
+                     "../../resource/img/posts/post3/img3.jpg",
+                     "../../resource/img/posts/post3/img4.png",
+                     "../../resource/img/posts/post3/img5.png",
+                     "../../resource/img/posts/post3/img6.png"
+                    ];
+        //images format and name will be changed depnding on the img folder....tbc... also content need to be changed to avoid plagiarism
+
+        function initPage() {
+            initLogin();
+            doHideElementOnRole('user-function', 0);
+            initImageControl(image);
+        }
+    </script>
 </head>
-<body>
+<body onload="initPage();">
+    <header>
+        <div>
+            <a href="../../index.html"><h1 class="header-title">Webpage title</h1></a>
+        </div>
+        <nav>
+            <div class="navigation-tab">
+                <a href="../post-function/post-list.html">Post List</a>
+            </div>
+
+            <div class="navigation-tab">
+                <a href="../other/about-us.html">About Us</a>
+            </div>
+
+            <div class="navigation-tab">
+                <a href="../other/contact.html">Contact</a>
+            </div>
+
+            <div class="navigation-tab">
+                <a href="../other/faq.html">FAQ</a>
+            </div>
+
+            <div class="navigation-separator">&nbsp</div>
+
+            <div class="navigation-tab non-user">
+                <a href="../login-function/login-form.html">Login</a>
+            </div>
+
+            <div class="navigation-tab non-user">
+                <a href="../login-function/register-form.html">Register</a>
+            </div>
+
+            <div class="navigation-tab user">
+                <a href="../../index.html" onclick="doLogout()">Logout</a>
+            </div>
+
+            <div class="navigation-tab">
+                <p id="debug-user-tab"></p>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Counter Strike Global Offensive</h1>
+        <div id="button-container">
+            <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+            <div id="page-display"></div>
+            <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+        </div>
+        <div class="img-container">
+            <img src="" alt="post image" class="post-img" id="image-display">
+        </div>
+
+        <p>
+            Counter-Strike: Global Offensive is an online first-person shooter that’s had a large following and presence 
+            within the esport scene for many years. The game requires quick reaction times, pixel perfect aim and a huge 
+            map awareness where players need to make use of strategic plays and good communication within the team. This 
+            is probably why the game is perfectly suited for broadcasting of professional matches and tournaments and also 
+            managed to gather such an avid and loyal following.
+        </p>
+        <p>
+            CS:GO was developed by Valve Corporations and Hidden Path Entertainment and was launched to the public in 2012. 
+            Before Global Offensive, which is the 4th game in the series, the first Counter Strike title (more commonly known 
+            as Counter Strike 1.6) was released back in 2000. But even before then, it was initially released as a Half Life 
+            Modification, created by two community members. This modification quickly gained popularity and traction, which 
+            led to Valve hiring the creators, in no time, the game’s intellectual property was acquired and the development 
+            of the series began. The rest is history!
+        </p>
+        <h3>Game Modes</h3>
+        <ul>
+            <li>
+                <strong>Deathmatch</strong></br>
+                The forever returning deathmatch. Team deathmatch has been a staple in first-person 
+                shooter games since the likes of Doom and Quake. The game mode pits two different teams against each other with 
+                a set amount of kills to reach to be the victor, and it’s no different in CS:GO. Pick your weapon, score some 
+                kills, and on death you are respawned somewhere else on the map.
+            </li>
+            <li>
+                <strong>Arms Race</strong></br>
+                In Arms Race, there are no teams. It’s you against everyone else and you are not allowed to pick your own 
+                weapon. On spawn, a weapon is assigned to you, and to accumulate new weapons, you have to get a kill with the weapon 
+                you’re given. This continues until you have cycled through all the weapons and finally you will be given a knife. Humiliate
+                your opponents and get a kill with it, and the win is yours! This is a very casual and relaxed mode, and it’s great 
+                for warming up or for having some fun with your friends.
+            </li>
+            <li>
+                <strong>Demolition</strong></br>
+                This is the game mode that is used when playing in competitive matches. Here the counter-terrorist and terrorist 
+                are given objectives of either defusing or planting a bomb. Teams are 5v5 and there’s no respawn on death.</br>
+                If you get killed, you have to wait until the end of the current round. If you get kills in this mode, you will be rewarded with 
+                new weapons and accessories such as grenades. The goal for the terrorists is to plant the bomb and if they succeed with 
+                this, the counter-terrorists not only have to kill all enemies to win, but also have to make sure that the bomb is defused 
+                before it goes off. This goes on for 10 rounds, until the teams switch sides and the first team to win 11 rounds will be 
+                victorious.
+            </li>
+            <li>
+                <strong>Casual</strong></br>
+                In this game mode the matches can be up to 10v10 and it’s up to the team playing counter-terrorist to either defuse 
+                the bomb if planted, or rescue hostages. This game mode is limited to a maximum of 15 rounds, and the first team to 
+                win 8 rounds will win the match. In Casual you earn money each round that you are able to spend on equipment and weapons
+                in the beginning of next round. This game mode is also using the matchmaking system, this means that players will be matched   
+                with equally skilled players according to their rank, but you are still able to invite friends to the game with either a 
+                lower or higher skill rating than yourself.
+            </li>
+            <li>
+                <strong>Competitive</strong></br>
+                The competitive mode is where the real action happens. You will not be able to join this game mode until you’ve reached a 
+                certain level of experience, which you can reach by playing the other modes.</br>
+                This mode also has another ranking system, that differs from the account experience you otherwise get by playing. You have 
+                18 different ranks to fight for, with the most prestigious one being Global Elite. Today there’s less than 1% of the player 
+                base that are currently ranked as Global Elite, so reaching this rank surely is an achievement to be proud of.</br>\
+                The game mode itself is very similar to Demolition mentioned above, but the difference is that you gather money in each 
+                round by getting kills or going for the objectives. This money can then be used at the start of each round to buy weapons 
+                and equipment. Just like demolition you play 5v5, and there are no respawns here as well. A match can be as long as 90 minutes, 
+                and if you leave before the game is finished, your account will get a timeout penalty.</br>
+                When you’ve leveled up to the first couple of ranks in this mode, your skills as a player will surely be tested. This game mode
+                requires a lot of map knowledge and good communication skills. You can use matchmaking for this mode. However, if you’ve started 
+                to climb the ranks, a pre-made group of friends or with players from your clan gives you the added advantage. This, coupled with 
+                good teamwork and knowledge of each others’ playing styles will definitely allow you to advance in the game further.
+            </li>
+        </ul>
+        <div class="user-function">
+            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
+        </div>
+    </div>
 
 </body>
 </html>
