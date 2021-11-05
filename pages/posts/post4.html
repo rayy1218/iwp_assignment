@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Dota 2</title>
+    <link rel="stylesheet" href="../../resource/style/global.css">
+    <link rel="stylesheet" href="../../resource/style/image-control.css">
+    <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/image-control.js"></script>
 </head>
-<body>
+<body onload="initPage();">
+    <header>
+        <div>
+            <a href="../../index.html"><h1 class="header-title">Webpage title</h1></a>
+        </div>
+        <nav>
+            <div class="navigation-tab">
+                <a href="../post-function/post-list.html">Post List</a>
+            </div>
+
+            <div class="navigation-tab">
+                <a href="../other/about-us.html">About Us</a>
+            </div>
+
+            <div class="navigation-tab">
+                <a href="../other/contact.html">Contact</a>
+            </div>
+
+            <div class="navigation-tab">
+                <a href="../other/faq.html">FAQ</a>
+            </div>
+
+            <div class="navigation-separator">&nbsp</div>
+
+            <div class="navigation-tab non-user">
+                <a href="../login-function/login-form.html">Login</a>
+            </div>
+
+            <div class="navigation-tab non-user">
+                <a href="../login-function/register-form.html">Register</a>
+            </div>
+
+            <div class="navigation-tab user">
+                <a href="../../index.html" onclick="doLogout()">Logout</a>
+            </div>
+
+            <div class="navigation-tab">
+                <p id="debug-user-tab"></p>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Dota 2</h1>
 
 </body>
 </html>
