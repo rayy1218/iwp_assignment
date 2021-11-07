@@ -2,28 +2,146 @@
 <html>
 <head>
     <title>Post1</title>
+<style>
+*
+{
+    box-sizing: border-box;
+	color:black;
+}
+body
+{
+    font-family: Arial;
+    margin: 0;
+    color: #C0B2D6;
+	background-color: lightblue;
+}
 
-	<link rel="stylesheet" href="../../pages/other/post.css">
+.header
+{
+    padding: 80px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+.header h1
+{
+    font-size: 40px;
+	color: white;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+.navbar a
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right
+{
+    float: right;
+}
+.navbar a:hover
+{
+    background-color: #dde;
+    color: #C7C7C7;
+}
+.row
+{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.side
+{
+    -ms-flex: 20%;
+    flex: 20%;
+    background-color:#424242;
+    padding: 20px;
+}
+.side a
+{
+	color:white;
+}
+.side h2
+{
+	color:white;
+}
 
+.main
+{
+    -ms-flex: 80%;
+    flex: 80%;
+    padding: 20px;
+    background-color: #5C5B5B;
+}
+.main h2
+{
+    color:white;
+}
+.info
+{
+    background-color: lightgrey;
+    padding: 20px;
+    width:30%;
+    -ms-flex: 70%;
+    color:black;
+    border-style:solid;
+    border-width:2px;
+    border-radius:15px;
+}
+.gameplay h2
+{
+    font-family: italic;
+    width:70%;
+	color:white;
+}
+.gameplay h3
+{
+    font-family: italic;
+    width:70%;
+	color:white;
+}
+@media screen and (max-width: 700px)
+{
+    .row {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+.button
+{
+    color:black;
+}
+</style>
+<script src="../../resource/script/login.js"></script>
+<script>
+	function initPage() {
+		initLogin();
+		doHideElementOnRole("button", 0);
+	}
+</script>
 
-	<script src="../../resource/script/login.js"></script>
-	<script>
-		function initPage() {
-			initLogin();
-			doHideElementOnRole("button", 0);
-		}
-	</script>
 </head>
-
 <body onload="initPage();">
 
 <div class="header">
-<h1>=Dummies=</h1>
-<p>Game Introduction Web Site</p>
-
+	<h1>=Dummies=</h1>
+	<p>Game Introduction Web Site</p>
 </div>
-<div class="navbar">
 
+<div class="navbar">
   <a href="../login-function/Account-choose.html">Account</button>
   <a href="../post-function/post-list.html">Post</a>
   <a href="#">Page</a>
@@ -31,8 +149,8 @@
 </div>
 
 <div class="row">
-  <div class="side">
-      <h2 style="color:black;">About Us</h2>
+	<div class="side">
+      <h2>About Us</h2>
 		<li>
 			<a href="../other/about-us.html">About us</a>
 		</li>
@@ -42,55 +160,53 @@
 		<li>
 			<a href="../other/faq.html">FAQ</a>
 		</li>
-</div>
-
-  <div class="main">
-  <h2 style="color:black;">Forza Horizon 4</h2>
-	<div class="info">	  
-      <h5>price=US$59.99</h5>
-	  <h5>Platform=Xbox,PC</h5>
-	  <h5>Publisher(s):Microsoft Studios</h5>
-	  <h5>Genre(s)=Racing</h5>
 	</div>
-	
-	<br>
-	  <img src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
-	  <br>
+
+<div class="main">
+	<h2>Forza Horizon 4</h2>
+		<div class="info">	  
+			<h5>price=US$59.99</h5>
+			<h5>Platform=Xbox,PC</h5>
+			<h5>Publisher(s):Microsoft Studios</h5>
+			<h5>Genre(s)=Racing</h5>
+		</div>
+			<br>
+			<img src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
+			<br>
 		
-	<div class="gameplay">	
-		<h3 style="color:black;">Gameplay</h3>
-		<h4 style="color:black;">Forza Horizon 4 is a racing video game set in an open world environment based in a fictionalised Great Britain,with regions that include condensed representations of Edinburgh,the Lake District (including Derwentwater), Ambleside and the Cotswolds (including Broadway), Bamburgh among others.
-	  The game features a route creator which enables players to create races using completely customized routes.The game takes place in a synchronised shared world,compared to the AI-driven 'drivatars' from its predecessors,with each server supporting up to 72 players.
-	  The game is also playable in offline mode.
-	  <br><br>
-		The game features a dynamic weather system that also depicts the change of seasons.
-	  The environment in the world will change depending on the season: for example, Derwentwater would freeze over in winter and allow players the ability to drive on the ice to reach areas of the game world that would be inaccessible during all the other seasons.
-	  The seasons are fixed across the game's servers,meaning that all players will experience the same conditions at the same time. 
-	  After completing a prologue series of events which introduce players to all four seasons,the shared-world seasons will change every week,with the changes happening on Thursdays at 2:30PM GMT.
-	  The season changes are forewarned to players in the game with a countdown clock,which, when finished,will trigger a short cinematic cutscene showing the previous season changing to the new one,although the cinematic will be delayed for players who are in the middle of an event or activity.
-	  The game features over 750 licensed cars.
-	  <br><br>
-		Players have the opportunity to buy in-game houses which unlock new items, cars and game-play perks, including Horizon Promo and the ability to fast travel anywhere on the map.
-	  Returning from Forza Horizon 3,Wheelspins are prize spins with random rewards ranging from cars,Credits (in-game currency),emotes,horns,and clothing.
-	  Wheelspins are rewarded from progressing through the story and completing certain seasonal challenges.
-	  These can also be bought in the #Forzathon shop.
-	  Super Wheelspins,enhanced versions of Wheelspins with better prizes,are also given for completing parts of the story and seasonal challenges.
-	  Super Wheelspins can also be bought in the #Forzathon Shop.
-	  Also returning from the past two games,British drum & bass label Hospital Records provided a soundtrack composed of 20 original tracks from various label artists,as well as an unreleased track by Fred V & Grafix titled "Sunrise",made for the game's opening cinematic.
-	  <br><br>
-		The soundtrack album was released on 26 October 2018.
-	  The game features a Dolby Atmos soundtrack.Owing to licensing issues,vehicles from Mitsubishi Motors and Toyota (including Lexus marque with the exception of some offroad racing and pre-customized trucks and Subaru BRZ) were not present in the base game,
-	  but updates released in 2019 re-introduced these brands;Mitsubishi returned on 15 January 2019 with the release of the Free Mitsubishi Motors Car Pack DLC. 
-	  That same day,however, two dancing emotes ("Carlton" and "Floss") were removed from the game due to lawsuits filed by those dances' creators against Epic Games for their use of the dances as emotes in their game Fortnite Battle Royale.
-	  On 19 November 2019,the official Forza Motorsport Twitter account announced that Toyota cars would be returning to the Forza series in the Series 17 update of Forza Horizon 4 on 12 December with the release of the 1998 Toyota Supra RZ
-	  </h4>
-      
-	  </div>
-	  <div class="button">
-		<button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment Here</button>
-		<button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Send Screenshot</button>
-	  </div>
-  </div>
-</div>
+			<div class="gameplay">	
+				<h2>Gameplay</h2>
+				<h3>Forza Horizon 4 is a racing video game set in an open world environment based in a fictionalised Great Britain,with regions that include condensed representations of Edinburgh,the Lake District (including Derwentwater), Ambleside and the Cotswolds (including Broadway), Bamburgh among others.
+				The game features a route creator which enables players to create races using completely customized routes.The game takes place in a synchronised shared world,compared to the AI-driven 'drivatars' from its predecessors,with each server supporting up to 72 players.
+				The game is also playable in offline mode.
+				<br><br>
+				The game features a dynamic weather system that also depicts the change of seasons.
+				The environment in the world will change depending on the season: for example, Derwentwater would freeze over in winter and allow players the ability to drive on the ice to reach areas of the game world that would be inaccessible during all the other seasons.
+				The seasons are fixed across the game's servers,meaning that all players will experience the same conditions at the same time. 
+				After completing a prologue series of events which introduce players to all four seasons,the shared-world seasons will change every week,with the changes happening on Thursdays at 2:30PM GMT.
+				The season changes are forewarned to players in the game with a countdown clock,which, when finished,will trigger a short cinematic cutscene showing the previous season changing to the new one,although the cinematic will be delayed for players who are in the middle of an event or activity.
+				The game features over 750 licensed cars.
+				<br><br>
+				Players have the opportunity to buy in-game houses which unlock new items, cars and game-play perks, including Horizon Promo and the ability to fast travel anywhere on the map.
+				Returning from Forza Horizon 3,Wheelspins are prize spins with random rewards ranging from cars,Credits (in-game currency),emotes,horns,and clothing.
+				Wheelspins are rewarded from progressing through the story and completing certain seasonal challenges.
+				These can also be bought in the #Forzathon shop.
+				Super Wheelspins,enhanced versions of Wheelspins with better prizes,are also given for completing parts of the story and seasonal challenges.
+				Super Wheelspins can also be bought in the #Forzathon Shop.
+				Also returning from the past two games,British drum & bass label Hospital Records provided a soundtrack composed of 20 original tracks from various label artists,as well as an unreleased track by Fred V & Grafix titled "Sunrise",made for the game's opening cinematic.
+				<br><br>
+				The soundtrack album was released on 26 October 2018.
+				The game features a Dolby Atmos soundtrack.Owing to licensing issues,vehicles from Mitsubishi Motors and Toyota (including Lexus marque with the exception of some offroad racing and pre-customized trucks and Subaru BRZ) were not present in the base game,
+				but updates released in 2019 re-introduced these brands;Mitsubishi returned on 15 January 2019 with the release of the Free Mitsubishi Motors Car Pack DLC. 
+				That same day,however, two dancing emotes ("Carlton" and "Floss") were removed from the game due to lawsuits filed by those dances' creators against Epic Games for their use of the dances as emotes in their game Fortnite Battle Royale.
+				On 19 November 2019,the official Forza Motorsport Twitter account announced that Toyota cars would be returning to the Forza series in the Series 17 update of Forza Horizon 4 on 12 December with the release of the 1998 Toyota Supra RZ
+				</h3>
+			</div>
+	
+		<div class="button">
+			<button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment Here</button>
+			<button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Send Screenshot</button>
+		</div>
+	</div>
 </body>
 </html>
