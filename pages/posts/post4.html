@@ -1,7 +1,115 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Dota 2</title>
+    <title>Post4</title>
+<style>
+*
+{
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: Arial;
+    margin: 0;
+	color: #C0B2D6;
+}
+.header 
+{
+    padding: 80px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+.header h1 
+{
+    font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+.navbar a 
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right 
+{
+    float: right;
+}
+.navbar a:hover 
+{
+    background-color: #dde;
+    color: #C7C7C7;
+}
+.row 
+{  
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.side 
+{
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.main 
+{   
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+.info
+{
+	background-color: lightgrey;
+	padding: 20px;
+	width:30%;
+    -ms-flex: 70%;
+	color:black;
+	border-style:solid;
+	border-width:2px;
+	border-radius:15px;
+}
+.gameplay
+{
+	font-family: italic;
+	width:70%;
+	color:black;
+}
+.footer 
+{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+@media screen and (max-width: 700px) 
+{
+    .row {   
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) 
+{
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+.button
+{
+	color:black;
+}
+</style>
     <link rel="stylesheet" href="../../resource/style/global.css">
     <link rel="stylesheet" href="../../resource/style/image-control.css">
     <script src="../../resource/script/login.js"></script>
@@ -24,58 +132,52 @@
         }
     </script>
 </head>
+
 <body onload="initPage();">
     <header>
-        <div>
-            <a href="../../index.html"><h1 class="header-title">Webpage title</h1></a>
-        </div>
-        <nav>
-            <div class="navigation-tab">
-                <a href="../post-function/post-list.html">Post List</a>
-            </div>
+<div class="navbar">
+  <a href="../login-function/Account-choose.html">Account</button>
+  <a href="../post-function/post-list.html">Post</a>
+  <a href="#">Page</a>
+  <a href="#" class="right">Other</a>
+</div>
 
-            <div class="navigation-tab">
-                <a href="../other/about-us.html">About Us</a>
-            </div>
+<div class="row">
+  <div class="side">
+      <h2 style="color:black;">About Us</h2>
+		<li>
+			<a href="../other/about-us.html">About us</a>
+		</li>
+		<li>
+			<a href="../other/contact.html">Contact</a>
+		</li>
+		<li>
+			<a href="../other/faq.html">FAQ</a>
+		</li>
+	</div>
+</div>
 
-            <div class="navigation-tab">
-                <a href="../other/contact.html">Contact</a>
-            </div>
+	
 
-            <div class="navigation-tab">
-                <a href="../other/faq.html">FAQ</a>
-            </div>
-
-            <div class="navigation-separator">&nbsp</div>
-
-            <div class="navigation-tab non-user">
-                <a href="../login-function/login-form.html">Login</a>
-            </div>
-
-            <div class="navigation-tab non-user">
-                <a href="../login-function/register-form.html">Register</a>
-            </div>
-
-            <div class="navigation-tab user">
-                <a href="../../index.html" onclick="doLogout()">Logout</a>
-            </div>
-
-            <div class="navigation-tab">
-                <p id="debug-user-tab"></p>
-            </div>
-        </nav>
-    </header>
-    <div class="content">
-        <h1>Dota 2</h1>
-        <div id="button-container">
-            <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
-            <div id="page-display"></div>
-            <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
-        </div>
-        <div class="img-container">
-            <img src="" alt="post image" class="post-img" id="image-display">
-        </div>
         
+  <div class="main">
+  <h2 style="color:black;">Dota 2</h2>
+	<div class="info">	  
+      <h5>price=US$0.00</h5>
+	  <h5>Platform=PC</h5>
+	  <h5>Publisher(s):Microsoft Studios</h5>
+	  <h5>Genre(s)=Racing</h5>
+	  
+	</div>
+	<div class="content">
+	<div id="button-container">
+    <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+    <div id="page-display"></div>
+    <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+</div>
+	<div class="img-container">
+    <img src="" alt="post image" class="post-img" id="image-display">
+</div>
         <p>
             In Dota 2, two teams of five players are matched against each other on a map with two different 
             bases that need to be occupied or defended. Before every match each player gets to choose a powerful 
