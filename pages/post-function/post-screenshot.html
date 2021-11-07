@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Screenshot</title>
-    <link rel="stylesheet" href="../../resource/style/global_old.css">
+
+    <link href="../../resource/style/global.css" rel="stylesheet">
     <link rel="stylesheet" href="../../resource/style/post-screenshot.css">
-    <script src="../../resource/script/login.js"></script>
     <style>
         .profile-picture {
             float: left;
@@ -14,50 +14,47 @@
             float:left;
         }
     </style>
+
+    <script src="../../resource/script/login.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+        }
+    </script>
+
 </head>
-<body onload="initLogin();">
-    <header>
-        <div>
-            <a href="../../index.html"><h1 class="header-title">Webpage title</h1></a>
-        </div>
-        <nav>
-            <div class="navigation-tab">
-                <a href="../post-function/post-list.html">Post List</a>
-            </div>
+<body onload="initPage();">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
+    </div>
+    <div class="navbar">
+        <a href="../login-function/Account-choose.html">Account</a>
+        <a href="../post-function/post-list.html">Post</a>
+        <a href="#">Page</a>
+        <a href="#" class="right">Other</a>
+    </div>
+</header>
 
-            <div class="navigation-tab">
-                <a href="../other/about-us.html">About Us</a>
-            </div>
-
-            <div class="navigation-tab">
+<div class="row">
+    <div class="side">
+        <h2>About Us</h2>
+        <ul>
+            <li>
+                <a href="../other/about-us.html">About us</a>
+            </li>
+            <li>
                 <a href="../other/contact.html">Contact</a>
-            </div>
-
-            <div class="navigation-tab">
+            </li>
+            <li>
                 <a href="../other/faq.html">FAQ</a>
-            </div>
+            </li>
+        </ul>
 
-            <div class="navigation-separator">&nbsp</div>
+    </div>
 
-            <div class="navigation-tab non-user">
-                <a href="../login-function/login-form.html">Login</a>
-            </div>
-
-            <div class="navigation-tab non-user">
-                <a href="../login-function/register-form.html">Register</a>
-            </div>
-
-            <div class="navigation-tab user">
-                <a href="../../index.html" onclick="doLogout()">Logout</a>
-            </div>
-
-            <div class="navigation-tab">
-                <p id="debug-user-tab"></p>
-            </div>
-        </nav>
-    </header>
-
-    <div class="content">
+    <div class="main">
         <h1>Screenshot</h1>
         <div class="screenshot-list">
             <div class="screenshot-item">
@@ -93,5 +90,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
