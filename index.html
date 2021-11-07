@@ -3,10 +3,19 @@
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="./resource/style/global.css">
+    <script src="./resource/script/login.js"></script>
     <script src="./resource/script/collapse-header.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
+        }
+    </script>
 </head>
 
-<body onload="initCollapseHeader();">
+<body onload="initPage()">
 <header>
     <div class="header">
         <h1>=Dummies=</h1>
@@ -24,6 +33,10 @@
 
         <div class="tab">
             <a class="content-item" href="./pages/post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="./pages/post-function/admin/admin_post_list.html">Admin</a>
         </div>
 
         <div class="tab" style="float: right">
