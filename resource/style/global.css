@@ -19,12 +19,10 @@ body
 {
     font-size: 40px;
 }
-
 .navbar {
+    overflow: hidden;
     background-color: black;
-    height: 50px;
 }
-
 .navbar a
 {
     float: left;
@@ -32,7 +30,6 @@ body
     color: white;
     text-align: center;
     padding: 14px 20px;
-    height: 50px;
     text-decoration: none;
 }
 .navbar a.right
@@ -41,11 +38,11 @@ body
 }
 .navbar a:hover
 {
+    background-color: #dde;
     color: #C7C7C7;
 }
 .row
 {
-
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -53,7 +50,6 @@ body
 }
 .side
 {
-
     -ms-flex: 30%;
     flex: 30%;
     background-color: #2C2B2B;
@@ -70,7 +66,7 @@ body
 {
     background-color: lightgrey;
     padding: 20px;
-    width: 30%;
+    width:30%;
     -ms-flex: 70%;
     color:black;
     border-style:solid;
@@ -115,36 +111,4 @@ body
 .profile-picture {
     width: 50px;
     height: 50px;
-}
-
-.tab {
-    width: 10%;
-    float: left;
-}
-.collapse-menu, .content-item {
-    text-align: center;
-    background-color: black;
-    display: block;
-    color: white;
-    padding: 14px 20px;
-}
-
-.content-item {
-    width: 100%;
-}
-
-.collapse-menu-content {
-    position: fixed;
-    width: 10%;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-in-out;
-}
-
-.content-item a {
-    color: white;
-}
-
-.white-text {
-    color: white;
 }
