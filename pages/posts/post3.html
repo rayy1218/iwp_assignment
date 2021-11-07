@@ -58,9 +58,14 @@
             <h5>Publisher(s):Valve,Hidden Path Entertainment</h5>
             <h5>Genre(s)=First-person shooter</h5>
         </div>
-        <br>
-        <img src="https://cdn.talkesport.com/wp-content/uploads/CSGO-Operation-10-Details.jpg" width="960" height="540">
-        <br>
+	<div id="button-container">
+        	<button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+                <div id="page-display"></div>
+                <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+        </div>
+        <div class="img-container">
+               	<img src="" alt="post image" class="post-img" id="image-display">
+        </div>
         <div class="gameplay">
             <p>
                 Counter-Strike: Global Offensive is an online first-person shooter that’s had a large following and presence
