@@ -8,24 +8,28 @@
 
 .post-list-item {
     width: 90%;
-    height: 120px;
+    height: 300px;
     border: 2px solid black;
     margin: 5px 0 5px 0;
     float: left;
     background-color: #5C5B5B;
+	
 }
 
 .post-list-item img {
-    width: 116px;
-    height: 116px;
+    width: 480px;
+    height: 270px;
     margin: 2px;
     float: left;
+	
+}
+.post-list-item a {
+    color:white;
 }
 
 .post-anchor {
     color: black;
     text-decoration-line: none;
-	size=100%;
 }
 
 .post-anchor h2 {
