@@ -25,7 +25,6 @@ body
 }
 .navbar a
 {
-    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -38,7 +37,6 @@ body
 }
 .navbar a:hover
 {
-    background-color: #dde;
     color: #C7C7C7;
 }
 .row
@@ -79,41 +77,11 @@ body
     width:70%;
 
 }
-
-footer
+.footer
 {
-    font-family: Arial;
-	position: fixed;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	background-color: rgb(36, 33, 34);
-	color: white;
-	text-align: left;
-    padding-left: 10px;
-}
-.footer-tab
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 14px 16px;
+    padding: 20px;
     text-align: center;
-    display: inline;
-    float: left;
-    background-color: rgb(36, 33, 34);
-    text-decoration: none;
-    color: white;
-}
-a.footer
-{
-    text-decoration: none;
-    color: white;
-    padding: 14px 16px;
-}
-    
-a.footer:hover
-{
-    background-color: #ddd;
+    background: #ddd;
 }
 @media screen and (max-width: 700px)
 {
@@ -141,4 +109,25 @@ a.footer:hover
 .profile-picture {
     width: 50px;
     height: 50px;
+}
+
+.tab {
+    float: left;
+    width: 10%;
+}
+
+.collapse-menu, .content-item {
+    padding: 14px 20px;
+    border: black 1px solid;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.collapse-menu-content {
+    position: absolute;
+    width: 10%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
 }

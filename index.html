@@ -3,20 +3,41 @@
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="./resource/style/global.css">
+    <script src="./resource/script/collapse-header.js"></script>
 </head>
 
-<body>
-<div class="header">
-<h1>=Dummies=</h1>
-<p>Game Introduction Web Site</p>
-</div>
-<div class="navbar">
-  <a href="#">Account</a>
-  <a href="#">Post</a>
-  <a href="#">Page</a>
-  <a href="#" class="right">Other</a>
-</div>
-<div class="row">
+<body onload="initCollapseHeader();">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
+
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="./pages/login-function/login-form.html">Login</a>
+                <a class="content-item" href="./pages/login-function/register-form.html">Register</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="content-item" href="./pages/post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="./pages/other/about-us.html">About us</a>
+                <a class="content-item" href="./pages/other/contact.html">Contact</a>
+                <a class="content-item" href="./pages/other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
+<span >
+    <div class="row">
   <div class="side">
       <h2>About Us</h2>
       <ul>
@@ -39,14 +60,14 @@
 	<br>
 	<a href="./pages/posts/post1.html">Read more</a>
     </a><br>
-	
+
 	<h2>Post-01</h2>
     <h5>Game Name</h5>
     <img src="https://www.pcgamesn.com/wp-content/uploads/2018/07/Games-like-Minecraft-header-new.jpg" width="960" height="540">
 	<br>
 	<a href="./pages/posts/post2.html">Read more</a>
     <br>
-	  
+
 	<h2>Post-02</h2>
     <h5>Game Name</h5>
     <img src="../iwp_assignment/resource/img/posts/post3/img1.jpg" width="960" height="540">
@@ -55,5 +76,7 @@
     <br>
   </div>
 </div>
+</span>
+
 </body>
 </html>
