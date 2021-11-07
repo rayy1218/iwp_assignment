@@ -1,53 +1,89 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>FAQ</title>
-    
+    <link href="../../resource/style/global.css" rel="stylesheet">
     <link rel="stylesheet" href="./main.css" />
+    <script src="../../resource/script/login.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+        }
+    </script>
+
 </head>
+<body onload="initPage();">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
+    </div>
+    <div class="navbar">
+        <a href="../login-function/Account-choose.html">Account</a>
+        <a href="../post-function/post-list.html">Post</a>
+        <a href="#">Page</a>
+        <a href="#" class="right">Other</a>
+    </div>
+</header>
 
-<body>
+<div class="row">
+    <div class="side">
+        <h2>About Us</h2>
+        <ul>
+            <li>
+                <a href="../other/about-us.html">About us</a>
+            </li>
+            <li>
+                <a href="../other/contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../other/faq.html">FAQ</a>
+            </li>
+        </ul>
 
-    <div class="container">
-        <div class="faq_container">
-        <h1>FREQUENTLY ASKED QUESTIONS</h1><br><br>
-            <div class="faq_down">
-                <button class="drop"><b>What is E-Sport</b></button>
-                <div class="panel">
-                    <p>A platform which will provide sufficient information and latest news about famous online games to gamers</p>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="faq_container">
+                <h1>FREQUENTLY ASKED QUESTIONS</h1><br><br>
+                <div class="faq_down">
+                    <button class="drop"><b>What is E-Sport</b></button>
+                    <div class="panel">
+                        <p>A platform which will provide sufficient information and latest news about famous online games to gamers</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq_down">
-                <button class="drop"><b>How Do I Sign Up</b></button>
-                <div class="panel">
-                    <p>Signing up to E-Sport is free and easy. <b>Must be 18 years or older</b></p>
+                <div class="faq_down">
+                    <button class="drop"><b>How Do I Sign Up</b></button>
+                    <div class="panel">
+                        <p>Signing up to E-Sport is free and easy. <b>Must be 18 years or older</b></p>
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="faq_down">
+                    <button class="drop"><b>Does it cost anything to sign up</b></button>
+                    <div class="panel">
+                        <p>No, E-Sport is completely free to sign up</p>
+                    </div>
 
-            <div class="faq_down">
-                <button class="drop"><b>Does it cost anything to sign up</b></button>
-                <div class="panel">
-                    <p>No, E-Sport is completely free to sign up</p>
                 </div>
 
-            </div>
-			
-			<div class="faq_down">
-                <button class="drop"><b>Does E-Sport is safe</b></button>
-                <div class="panel">
-                    <p>Yes, its safe to use</b></p>
+                <div class="faq_down">
+                    <button class="drop"><b>Does E-Sport is safe</b></button>
+                    <div class="panel">
+                        <p>Yes, its safe to use</b></p>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
+        <script src="./script.js"></script>
     </div>
-
-    <script src="./script.js"></script>
+</div>
 </body>
-
 </html>

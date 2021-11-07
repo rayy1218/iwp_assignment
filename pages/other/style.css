@@ -1,8 +1,7 @@
 body {
         font-size: 11.5pt;
-        color: #5C5B5B;
+        color: white;
         line-height: 1.75em;
-       
 }
 
 body,input {
@@ -28,13 +27,13 @@ h2{
         margin-bottom: 1em;
 }
 
-#header {
-        height: 75px;
+#local-header {
+        /*height: 75px;*/
         position: relative;
         background: #6E6E6E url(images/img03.jpg) top left no-repeat;
         padding: 45px;
         color: #FFFFFF;
-        width: 888px;
+        /*width: 888px;*/
         border: solid 1px #7E7E7E;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -45,12 +44,12 @@ h2{
         padding: 45px 45px 15px 45px;
         position: relative;
         width: 890px;
-        margin: 0;
+        margin: auto;
 }
 
 #wrapper {
         position: relative;
         width: 980px;
         margin: 75px auto 0 auto;
-        background: #FFFFFF;
+        /*background: #FFFFFF;*/
 }
