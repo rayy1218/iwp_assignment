@@ -1,5 +1,5 @@
 .img-container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto 0 auto;
     height: 80%;
 }
@@ -16,7 +16,7 @@
 #button-container {
     display: flex;
     flex-flow: row nowrap;
-    width: 60%;
+    width: 80%;
     margin: 0 auto 0 auto;
 }
 

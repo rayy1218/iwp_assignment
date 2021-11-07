@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>osu!</title>
+        <link rel="stylesheet" href="../../resource/style/image-control.css">
+        <link rel="stylesheet" href="../../resource/style/post.css">
+
+        <style>
+            .white-text {
+                color: white;
+            }
+        </style>
+
+        <script src="../../resource/script/image-control.js"></script>
+        <script src="../../resource/script/login.js"></script>
+        <script>
+            const image = [
+                "../../resource/img/posts/post6/img1.jpg",
+                "../../resource/img/posts/post6/img2.jpg",
+                "../../resource/img/posts/post6/img3.jpg",
+                "../../resource/img/posts/post6/img4.png",
+                "../../resource/img/posts/post6/img5.png"
+            ];
+
+            function initPage() {
+                initLogin();
+                doHideElementOnRole("button", 0);
+                initImageControl(image);
+            }
+        </script>
+    </head>
+    <body onload="initPage()">
+        <div class="header">
+            <h1>=Dummies=</h1>
+            <p>Game Introduction Web Site</p>
+
+        </div>
+        <div class="navbar">
+            <a href="#">Account</a>
+            <a href="#">Post</a>
+            <a href="#">Page</a>
+            <a href="#" class="right">Other</a>
+        </div>
+
+        <div class="row">
+            <div class="side">
+                <h2 class="white-text">About Us</h2>
+                <ul>
+                    <li>
+                        <a href="../other/about-us.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="../other/contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="../other/faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="main">
+                <h2 class="white-text">osu!</h2>
+                <div class="info white-text">
+                    <h5>price=Free</h5>
+                    <h5>Platform=PC</h5>
+                    <h5>Publisher(s):Microsoft Studios</h5>
+                    <h5>Genre(s)=Racing</h5>
+                </div>
+
+                <br>
+
+                <div class="gameplay">
+                    <div id="button-container">
+                        <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+                        <div id="page-display"></div>
+                        <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+                    </div>
+                    <div class="img-container">
+                        <img src="" alt="post image" class="post-img" id="image-display">
+                    </div>
+
+                    <h2 class="white-text">Gameplay</h2>
+
+                    <p class="white-text">
+                        osu! is a rhythm game created by Dean "peppy" Herbert.
+                    </p>
+                    <p class="white-text">
+                        The primary gameplay of osu! is control the cursor to follow the rhythm such as clicking the circle, sliding
+                        the bar and rotating the spinner with a mouse, tablet or touch screen.
+                    </p>
+                    <p class="white-text">
+                        There are also different mode of osu! including osu!mania, osu!taiko and osu!catch that provide different
+                        method of gameplay of you to discover.
+                    </p>
+                    <p class="white-text">
+                        In osu!, all the different song is called "beatmap", which created by different beatmap artist where you can
+                        download in the official webpage without worry about suspicious file problem.
+                    </p>
+
+                    <p class="white-text">
+                        There are also scoring and ranking system in every of the beatmap for players to compete.
+                    </p>
+
+                </div>
+                <div class="button">
+                    <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment Here</button>
+                    <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Send Screenshot</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
