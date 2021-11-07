@@ -3,65 +3,7 @@
     <head>
         <title>test</title>
         <link href="../../resource/style/global.css" rel="stylesheet">
-
-        <style>
-            .tab {
-                width: 10%;
-                float: left;
-            }
-            .collapse-menu, .content-item {
-                padding: 5px;
-                border: white 1px solid;
-                text-align: center;
-                background-color: black;
-            }
-
-            .collapse-menu-content {
-                overflow: hidden;
-                max-height: 0;
-                transition: max-height 0.5s ease-in-out;
-            }
-
-            .content-item a {
-                color: white;
-            }
-
-            .white-text {
-                color: white;
-            }
-
-            .navbar {
-                display: block;
-                height: 30px;
-                background-color: black;
-            }
-        </style>
-        <script>
-            function init() {
-                let tab_node = document.getElementsByClassName("tab");
-                for (let i = 0; i < tab_node.length; i += 1) {
-                    tab_node[i].addEventListener("mouseenter", function () {
-                        toggleCollapse(this);
-                    });
-                    tab_node[i].addEventListener("mouseleave", function () {
-                        toggleCollapse(this);
-                    });
-                }
-            }
-
-            function toggleCollapse(element) {
-                let menu_content = element.getElementsByClassName("collapse-menu-content");
-                for (let i = 0; i < menu_content.length; i += 1) {
-                    if (menu_content[i].style.maxHeight) {
-                        menu_content[i].style.maxHeight = null;
-                    }
-                    else {
-                        menu_content[i].style.maxHeight = menu_content[i].scrollHeight + "px";
-                    }
-                }
-            }
-
-        </script>
+        <script src="../../resource/script/collapse-header.js"></script>
     </head>
     <body onload="init();">
     <header>
@@ -74,40 +16,26 @@
             <div class="tab">
                 <div class="collapse-menu white-text">Account</div>
                 <div class="collapse-menu-content">
-                    <div class="content-item"><a href="../../pages/login-function/login-form.html">Login</a></div>
-                    <div class="content-item"><a href="../../pages/login-function/register-form.html">Register</a></div>
+                    <a class="content-item" href="../../pages/login-function/login-form.html">Login</a>
+                    <a class="content-item" href="../../pages/login-function/register-form.html">Register</a>
                 </div>
             </div>
+
             <div class="tab">
-                <div class="collapse-menu white-text">Post</div>
-                <div class="collapse-menu-content">
-                    <div class="content-item"><a href="../../pages/posts/post1.html">Post1</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post2.html">Post2</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post3.html">Post3</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post4.html">Post4</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post5.html">Post5</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post6.html">Post6</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post7.html">Post7</a></div>
-                    <div class="content-item"><a href="../../pages/posts/post8.html">Post8</a></div>
-                </div>
+                <a href="../../pages/post-function/post-list.html">Posts</a>
             </div>
-            <div class="tab">
-                <div class="collapse-menu white-text">Page</div>
-                <div class="collapse-menu-content">
-                    <div class="content-item"><a href="../../pages/login-function/login-form.html">Login</a></div>
-                    <div class="content-item"><a href="../../pages/login-function/register-form.html">Register</a></div>
-                </div>
-            </div>
+
             <div class="tab" style="float: right">
                 <div class="collapse-menu white-text">Other</div>
                 <div class="collapse-menu-content">
-                    <div class="content-item"><a href="../../pages/other/about-us.html">About us</a></div>
-                    <div class="content-item"><a href="../../pages/other/contact.html">Contact</a></div>
-                    <div class="content-item"><a href="../../pages/other/faq.html">FAQ</a></div>
+                    <a class="content-item" href="../../pages/other/about-us.html">About us</a>
+                    <a class="content-item" href="../../pages/other/contact.html">Contact</a>
+                    <a class="content-item" href="../../pages/other/faq.html">FAQ</a>
                 </div>
             </div>
         </div>
-        </header>
+    </header>
+
 
     </body>
 </html>
