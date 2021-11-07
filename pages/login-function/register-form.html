@@ -2,24 +2,30 @@
 <html>
 <head>
     <title>Register</title>
-	<style>
-	body 
-{
-	font-family: Arial, 
-	Helvetica, sans-serif;
-}
-input[type=text], input[type=password],input[type=number] 
+<style>
 
+body
+{
+    font-family: Arial;
+    margin: 0;
+	background-color:#5C5B5B;
+}
+input[type=text],input[type=password] ,input[type=number] 
 {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
+	background-color:#dde;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
+	width: 70%;
 }
-
-/* Set a style for all buttons */
+b
+{
+	color:white;
+	font-size:20px;
+}
 button 
 {
 	background-color: blue;
@@ -28,10 +34,12 @@ button
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	width: 70%;
+	font-size:20px;
 }	
 button:hover 
 {
+	font-size:20px;
 	opacity: 0.7;
 }
 </style>
@@ -40,20 +48,25 @@ button:hover
 <body>
 <form action="../../index.html">
     <div class="container">
-		<label for="uname"><b>Username</b></label>
+		<label for="uname"><b>Username: </b></label><br>
 		<input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+		<br>
 		
-		<label for="email"><b>Email</b></label>
+		<label for="email"><b>Email: </b></label><br>
 		<input type="text" placeholder="Enter Email" id="email" name="email" required>
+		<br>
 		
-		<label for="psw"><b>Password</b></label>
+		<label for="psw"><b>Password: </b></label><br>
 		<input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+		<br>
         
-		<label for="psw2"><b>Re-enter Password</b></label>
+		<label for="psw2"><b>Re-enter Password: </b></label><br>
 		<input type="password" placeholder="Enter Password" id="psw2" name="psw2" required>
+		<br>
 		
-		<label for="age"><b>Age</b></label>
+		<label for="age"><b>Age: </b></label><br>
 		<input type="number" min="0" placeholder="Enter Age" id="age" name="age" required>
+		<br>
 		
 		<button type="submit" onclick="return doRegister();">register</button>
     </div>

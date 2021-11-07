@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage</title>
-</head>
+    <title>homepage</title>
 <style>
 *
 {
     box-sizing: border-box;
+	color:black;
 }
-body 
+body
 {
     font-family: Arial;
     margin: 0;
-	color: #C0B2D6;
+    color: #C0B2D6;
+	background-color: lightblue;
 }
-.header 
+
+.header
 {
     padding: 80px;
     text-align: center;
     background: blue;
     color: white;
 }
-.header h1 
+.header h1
 {
     font-size: 40px;
+	color: white;
+}
+.header p
+{
+	color: white;
 }
 .navbar {
     overflow: hidden;
     background-color: black;
 }
-.navbar a 
+.navbar a
 {
     float: left;
     display: block;
@@ -38,55 +45,63 @@ body
     padding: 14px 20px;
     text-decoration: none;
 }
-.navbar a.right 
+.navbar a.right
 {
     float: right;
 }
-.navbar a:hover 
+.navbar a:hover
 {
     background-color: #dde;
     color: #C7C7C7;
 }
-.row 
-{  
+.row
+{
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.side 
+.side
 {
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #f1f1f1;
+    -ms-flex: 20%;
+    flex: 20%;
+    background-color:#424242;
     padding: 20px;
 }
-.main 
-{   
-    -ms-flex: 70%;
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-}
-.fakeimg 
+.side a
 {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+	color:white;
 }
-.footer 
+.side h2
 {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
+	color:white;
 }
-@media screen and (max-width: 700px) 
+.main
 {
-    .row {   
+    -ms-flex: 80%;
+    flex: 80%;
+    padding: 20px;
+    background-color: #5C5B5B;
+}
+.main a
+{
+    color:white;
+}
+.main h2
+{
+    color:white;
+}
+.main h4
+{
+    color:white;
+}
+@media screen and (max-width: 700px)
+{
+    .row {
         flex-direction: column;
     }
 }
-@media screen and (max-width: 400px) 
+@media screen and (max-width: 400px)
 {
     .navbar a {
         float: none;
@@ -94,52 +109,61 @@ body
     }
 }
 </style>
-<body>
-<div class="header">
-<h1>=Dummies=</h1>
-<p>Game Introduction Web Site</p>
-</div>
-<div class="navbar">
-  <a href="#">Account</a>
-  <a href="#">Post</a>
-  <a href="#">Page</a>
-  <a href="#" class="right">Other</a>
-</div>
-<div class="row">
-  <div class="side">
-      <h2>About Us</h2>
-      <ul>
-          <li>
-              <a href="./pages/other/about-us.html">About us</a>
-          </li>
-          <li>
-              <a href="./pages/other/contact.html">Contact</a>
-          </li>
-          <li>
-              <a href="./pages/other/faq.html">FAQ</a>
-          </li>
-      </ul>
 
+<body>
+
+<div class="header">
+	<h1>=Dummies=</h1>
+	<p>Game Introduction Web Site</p>
 </div>
-  <div class="main">
-    <h2>Post-01</h2>
-    <h5>Forza Horizon 4</h5>
-	<a href="./pages/posts/post1.html">
-    <img alt="Forza Horizon 4" src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
-    </a><br>
+
+<div class="navbar">
+	<a href="../login-function/Account-choose.html">Account</button>
+	<a href="../post-function/post-list.html">Post</a>
+	<a href="#">Page</a>
+	<a href="#" class="right">Other</a>
+</div>
+
+<div class="row">
+	<div class="side">
+		<h2>About Us</h2>
+		<ul>
+			<li>
+				<a href="./pages/other/about-us.html">About us</a>
+			</li>
+			<li>
+				<a href="./pages/other/contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="./pages/other/faq.html">FAQ</a>
+			</li>
+		</ul>
+	</div>
 	
-	<h2>Post-01</h2>
-    <h5>Game Name</h5>
-    <div class="fakeimg" style="height:200px;">Game img</div>
-	<a href="./pages/posts/post2.html">Read more</a>
-    <br>
+	<div class="main">
+		<h2>Post-01</h2>
+		<h4>Forza Horizon 4</h4>
+		<a href="./pages/posts/post1.html">
+		<img alt="Forza Horizon 4" src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
+		<br>
+		<a href="./pages/posts/post3.html">Read more</a>
+		<br>
+	
+		<h2>Post-02</h2>
+		<h4>Minecraft</h4>
+		<img alt="Minecraft"src="https://www.pcgamesn.com/wp-content/uploads/2018/07/Games-like-Minecraft-header-new.jpg" width="960" height="540">
+		<br>
+		<a href="./pages/posts/post2.html">Read more</a>
+		<br>
 	  
-	<h2>Post-02</h2>
-    <h5>Game Name</h5>
-    <div class="fakeimg" style="height:200px;">Game img</div>
-	<a href="./pages/posts/post3.html">Read more</a>
-    <br>
-  </div>
+		<h2>Post-02</h2>
+		<h4>Game Name</h4>
+		<div class="fakeimg" style="height:200px;">Game img</div>
+		<br>
+		<a href="./pages/posts/post3.html">Read more</a>
+		<br>
+	</div>
+	
 </div>
 </body>
 </html>
