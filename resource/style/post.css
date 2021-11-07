@@ -1,13 +1,16 @@
 *
 {
     box-sizing: border-box;
+    color:black;
 }
 body
 {
     font-family: Arial;
     margin: 0;
     color: #C0B2D6;
+    background-color: lightblue;
 }
+
 .header
 {
     padding: 80px;
@@ -18,18 +21,24 @@ body
 .header h1
 {
     font-size: 40px;
+    color: white;
 }
 .navbar {
-    overflow: hidden;
     background-color: black;
 }
+/*.navbar a*/
+/*{*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 20px;*/
+/*    text-decoration: none;*/
+/*}*/
+
 .navbar a
 {
-    float: left;
     display: block;
-    color: white;
     text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
 }
 .navbar a.right
@@ -50,17 +59,30 @@ body
 }
 .side
 {
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #2C2B2B;
+    -ms-flex: 20%;
+    flex: 20%;
+    background-color:#424242;
     padding: 20px;
 }
+.side a
+{
+    color:white;
+}
+.side h2
+{
+    color:white;
+}
+
 .main
 {
-    -ms-flex: 70%;
-    flex: 70%;
+    -ms-flex: 80%;
+    flex: 80%;
     padding: 20px;
     background-color: #5C5B5B;
+}
+.main h2
+{
+    color:white;
 }
 .info
 {
@@ -73,17 +95,17 @@ body
     border-width:2px;
     border-radius:15px;
 }
-.gameplay
+.gameplay h2
 {
     font-family: italic;
     width:70%;
-
+    color:white;
 }
-.footer
+.gameplay h3
 {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
+    font-family: italic;
+    width:70%;
+    color:white;
 }
 @media screen and (max-width: 700px)
 {
