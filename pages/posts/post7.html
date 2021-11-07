@@ -2,9 +2,16 @@
 <html>
 <head>
     <title>AMONG US</title>
-	<link rel="stylesheet" href="../../pages/other/post.css">
+	<link rel="stylesheet" href="../../resource/style/global.css">
+	<script src="../../resource/script/login.js"></script>
+	<script>
+		function initPage() {
+			initLogin();
+			doHideElementOnRole("user-function", 0);
+		}
+	</script>
 </head>
-<body>
+<body onload="initPage();">
 <div class="header">
 <h1>=Dummies=</h1>
 <p>Game Introduction Web Site</p>
@@ -16,18 +23,20 @@
   <a href="#" class="right">Other</a>
 </div>
 <div class="row">
-  <div class="side">
-
-		<li>
-			<a href="./pages/other/about-us.html">About us</a>
-		</li>
-		<li>
-			<a href="./pages/other/contact.html">Contact</a>
-		</li>
-		<li>
-			<a href="./pages/other/faq.html">FAQ</a>
-		</li>
-</div>
+	<div class="side">
+		<h2 class="white-text">About Us</h2>
+		<ul>
+			<li>
+				<a href="../other/about-us.html">About us</a>
+			</li>
+			<li>
+				<a href="../other/contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="../other/faq.html">FAQ</a>
+			</li>
+		</ul>
+	</div>
   <div class="main">
   <h2>Among Us</h2>
 	<div class="info">	  
@@ -37,7 +46,7 @@
 	  <h5>Genre(s)=Casual</h5>
 	</div>
 	<br>
-	  <img src="among us.jpg" width="960" height="540"></img>
+	  <img src="among us.jpg" width="960" height="540">
 	  <br>
 		
 	<div class="gameplay">	
@@ -54,6 +63,11 @@
 		
 	  </h4>
       
+	  </div>
+
+	  <div class="user-function">
+		  <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+		  <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
 	  </div>
   </div>
   

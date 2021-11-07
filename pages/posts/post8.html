@@ -2,32 +2,44 @@
 <html>
 <head>
     <title>GTA V</title>
-	<link rel="stylesheet" href="../../pages/other/post.css">
+	<link rel="stylesheet" href="../../resource/style/global.css">
+	<link rel="stylesheet" href="../../resource/style/image-control.css">
+
+	<script src="../../resource/script/login.js"></script>
+	<script>
+		function initPage() {
+			initLogin();
+			doHideElementOnRole("user-function", 0);
+
+		}
+	</script>
 </head>
-<body>
+<body onload="initPage();">
 <div class="header">
 <h1>=Dummies=</h1>
 <p>Game Introduction Web Site</p>
 </div>
 <div class="navbar">
-  <a href="../login-function/Account-choose.html">Account</button>
+  <a href="../login-function/Account-choose.html">Account</a>
   <a href="../post-function/post-list.html">Post</a>
   <a href="#">Page</a>
   <a href="#" class="right">Other</a>
 </div>
 <div class="row">
-  <div class="side">
-
-		<li>
-			<a href="./pages/other/about-us.html">About us</a>
-		</li>
-		<li>
-			<a href="./pages/other/contact.html">Contact</a>
-		</li>
-		<li>
-			<a href="./pages/other/faq.html">FAQ</a>
-		</li>
-</div>
+	<div class="side">
+		<h2 class="white-text">About Us</h2>
+		<ul>
+			<li>
+				<a href="../other/about-us.html">About us</a>
+			</li>
+			<li>
+				<a href="../other/contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="../other/faq.html">FAQ</a>
+			</li>
+		</ul>
+	</div>
   <div class="main">
   <h2>Grand Theft Auto V</h2>
 	<div class="info">	  
@@ -37,7 +49,7 @@
 	  <h5>Genre(s)=Action-adventure</h5>
 	</div>
 	<br>
-	  <img src="gtav.jpg" width="960" height="540"></img>
+	  <img src="gtav.jpg" width="960" height="540">
 	  <br>
 		
 	<div class="gameplay">	
@@ -52,14 +64,16 @@
 		(drug dealer and gunrunner). They will attempt to commit heists while under pressure from a corrupted government agency and powerful criminals.
 
 	  </h4>
-      
+
+	  </div>
+
+	  <div class="user-function">
+		  <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+		  <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
 	  </div>
   </div>
   
-		<div class="user-function">
-            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
-            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
-        </div>
+
 </div>
 </body>
 </html>
