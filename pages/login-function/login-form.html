@@ -3,22 +3,27 @@
 <head>
 <title>Login</title>
 <style>
-body 
+
+body
 {
-	font-family: Arial, 
-	Helvetica, sans-serif;
+    font-family: Arial;
+    margin: 0;
+	background-color:#5C5B5B;
 }
-input[type=text], input[type=password] 
+input[type=text],input[type=password] 
 {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
+	background-color:#dde;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
+	width: 70%;
 }
-
-/* Set a style for all buttons */
+h3{
+	color:white;
+}
 button 
 {
 	background-color: blue;
@@ -27,27 +32,31 @@ button
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	width: 70%;
+	font-size:20px;
 }	
 button:hover 
 {
+	font-size:20px;
 	opacity: 0.7;
 }
+
 </style>
 
   <script src="../../resource/script/login.js"></script>
+  
 </head>
 <body>
-  <form action="../../index.html">
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username or Email" id="uname" name="uname" required>
+	<form action="../../index.html">
+		<div class="container">
+			<label for="uname"><h3>Username</h3></label>
+			<input type="text" placeholder="Enter Username or Email" id="uname" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+			<label for="psw"><h3>Password</h3></label>
+			<input type="password" placeholder="Enter Password" id="psw" name="psw" required>
         
-      <button type="submit" onclick="return doLogin();">Login</button>
-    </div>
-  </form>
+			<button type="submit" onclick="return doLogin();">Login</button>
+		</div>
+	</form>
 </body>
 </html>
