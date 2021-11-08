@@ -18,10 +18,11 @@
 
 .post-list-item img {
     width: 100%;
+    transition: opacity 0.5s;
 }
 
 .post-list-item img:hover {
-    opacity: 50%;
+    opacity: 20%;
 }
 
 .anchor-container {
