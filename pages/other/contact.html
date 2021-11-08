@@ -2,17 +2,23 @@
 <html>
 <head>
     <title>Contact Us</title>
-    <link href="../../resource/style/global.css" rel="stylesheet">
-    <script src="../../resource/script/login.js"></script>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../../resource/style/global.css" rel="stylesheet">
+    <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/collapse-header.js"></script>
     <script>
         function initPage() {
             initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
         }
     </script>
 
@@ -22,12 +28,33 @@
     <div class="header">
         <h1>=Dummies=</h1>
         <p>Game Introduction Web Site</p>
+
     </div>
     <div class="navbar">
-        <a href="../login-function/Account-choose.html">Account</a>
-        <a href="../post-function/post-list.html">Post</a>
-        <a href="#">Page</a>
-        <a href="#" class="right">Other</a>
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../login-function/login-form.html">Login</a>
+                <a class="content-item" href="../login-function/register-form.html">Register</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -88,7 +115,7 @@
                     <h6 class="text-uppercase mb-4 font-weight-bold ">
 
                     </h6>
-                    <p >
+                    <p>
                     <h4>EMAIL</h4>
                     </p>
                     <p>
@@ -103,7 +130,7 @@
 
             </div>
             <hr>
-            <div id="googleMap" style="width:200%;height:50px; center-right"></div>
+            <div id="googleMap" style="width:200%;height:50px;"></div>
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.606580945695!2d101.63952976475684!3d2.928867347866791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb6e4a9d3b7a1%3A0xd0f74e8ad10f1129!2sMultimedia%20University%20-%20MMU%20Cyberjaya!5e0!3m2!1sen!2smy!4v1636022181505!5m2!1sen!2smy" width="600" height="500" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>
 

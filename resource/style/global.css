@@ -162,6 +162,7 @@ a.footer:hover
 
 .collapse-menu-content {
     position: absolute;
+    z-index: 99;
     width: 10%;
     overflow: hidden;
     max-height: 0;

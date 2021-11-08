@@ -4,8 +4,10 @@
     <title>Post3</title>
     <link rel="stylesheet" href="../../resource/style/image-control.css">
     <link rel="stylesheet" href="../../resource/style/global.css">
+
 	<script src="../../resource/script/login.js"></script>
 	<script src="../../resource/script/image-control.js"></script>
+    <script src="../../resource/script/collapse-header.js"></script>
 	<script>
 		let image = [
                      "../../resource/img/posts/post3/img1.jpg",
@@ -18,6 +20,9 @@
 		
 		function initPage() {
 			initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
 			doHideElementOnRole("user-function", 0);
 			initImageControl(image);
 		}
@@ -25,20 +30,39 @@
 </head>
 
 <body onload="initPage();">
-    <header>
-        <div class="header">
-            <h1>=Dummies=</h1>
-            <p>Game Introduction Web Site</p>
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
 
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../login-function/login-form.html">Login</a>
+                <a class="content-item" href="../login-function/register-form.html">Register</a>
+            </div>
         </div>
 
-        <div class="navbar">
-          <a href="../login-function/Account-choose.html">Account</a>
-          <a href="../post-function/post-list.html">Post</a>
-          <a href="#">Page</a>
-          <a href="#" class="right">Other</a>
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
         </div>
-    </header>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
         <div class="row">
           <div class="side">
               <h2 style="color:black;">About Us</h2>
