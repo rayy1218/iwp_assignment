@@ -3,15 +3,24 @@
 <head>
     <title>Post1</title>
 	<link href="../../resource/style/global.css" rel="stylesheet">
+	<link href="../../resource/style/image-control.css" rel="stylesheet">
 	<script src="../../resource/script/login.js"></script>
 	<script src="../../resource/script/collapse-header.js"></script>
+	<script src="../../resource/script/image-control.js"></script>
 	<script>
+		let image = [
+			"../../resource/img/posts/post1/forza-1.jpg",
+			"../../resource/img/posts/post1/forza-2.jpg",
+			"../../resource/img/posts/post1/forza-3.jpg"
+		]
+
 		function initPage() {
 			initLogin();
 			initCollapseHeader();
 			doHideElementOnRole("admin-function", 0);
 			doHideElementOnRole("admin-function", 1);
 			doHideElementOnRole("button", 0);
+			initImageControl(image);
 		}
 	</script>
 
@@ -75,10 +84,18 @@
 			<h5>Genre(s)=Racing</h5>
 		</div>
 			<br>
-			<img src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
 			<br>
 
 			<div class="gameplay">
+				<div id="button-container">
+					<button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+					<div id="page-display"></div>
+					<button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+				</div>
+				<div class="img-container">
+					<img src="" alt="post image" class="post-img" id="image-display">
+				</div>
+
 				<h2>Gameplay</h2>
 				<h3>Forza Horizon 4 is a racing video game set in an open world environment based in a fictionalised Great Britain,with regions that include condensed representations of Edinburgh,the Lake District (including Derwentwater), Ambleside and the Cotswolds (including Broadway), Bamburgh among others.
 				The game features a route creator which enables players to create races using completely customized routes.The game takes place in a synchronised shared world,compared to the AI-driven 'drivatars' from its predecessors,with each server supporting up to 72 players.
