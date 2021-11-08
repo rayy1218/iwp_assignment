@@ -16,9 +16,8 @@
 }
 
 .post-list-item img {
-    width: 116px;
-    height: 116px;
-    margin: 2px;
+    height: 100px;
+    margin: 10px;
     float: left;
 }
 
