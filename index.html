@@ -11,6 +11,9 @@
             initCollapseHeader();
             doHideElementOnRole("admin-function", 0);
             doHideElementOnRole("admin-function", 1);
+            doHideElementOnRole("user-admin-function", 0);
+            doHideElementOnRole("non-user-function", 1);
+            doHideElementOnRole("non-user-function", 2);
         }
     </script>
 </head>
@@ -26,8 +29,9 @@
         <div class="tab">
             <div class="collapse-menu white-text">Account</div>
             <div class="collapse-menu-content">
-                <a class="content-item" href="./pages/login-function/login-form.html">Login</a>
-                <a class="content-item" href="./pages/login-function/register-form.html">Register</a>
+                <a class="content-item non-user-function" href="./pages/login-function/login-form.html">Login</a>
+                <a class="content-item non-user-function" href="./pages/login-function/register-form.html">Register</a>
+                <a class="content-item user-admin-function" href="./index.html" onclick="doLogout();">Logout</a>
             </div>
         </div>
 
