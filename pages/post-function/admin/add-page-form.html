@@ -2,27 +2,89 @@
 <html>
 <head>
     <title>Add page</title>
-    <link rel="stylesheet" href="../../resource/style/global.css">
-    //not sure need to put global css in yet
-    <link rel="stylesheet" href="../../resource/style/admin.css">
+    <link href="../../../resource/style/global.css" rel="stylesheet">
+    <script src="../../../resource/script/login.js"></script>
+    <script src="../../../resource/script/header.js"></script>
+    <link rel="stylesheet" href="../../../resource/style/admin.css">
     <script src="../../../resource/script/admin.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+            initHeader();
+        }
+    </script>
+
 </head>
-<body>
-    <h1>Add Additional Form Pages</h1>
-    <form>
-        <label for="g_name">Enter Game Name : </label>
-        <input type="text" id="g_name" name="g_name"></br>
+<body onload="initPage();">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
 
-        <label for="description">Enter Game Description: </label>
-        <input type="textarea" id="description" name="description"></br>
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item non-user-function" href="../../login-function/login-form.html">Login</a>
+                <a class="content-item non-user-function" href="../../login-function/register-form.html">Register</a>
+                <a class="content-item user-admin-function" href="../../../index.html" onclick="doLogout();">Logout</a>
+            </div>
+        </div>
 
-        <label for="thumbnail">Thumbnail address: </label>
-        <input type="file" id="Thumbnail" name="thumbnail"></br>
+        <div class="tab">
+            <a class="content-item" href="../../post-function/post-list.html">Posts</a>
+        </div>
 
-        <input type="submit" value="Submit">
-        <a href="./admin_post_list.html"><button type="button" onclick="return showConfirm()" style="margin:5px;">Cancel</button></a>
+        <div class="tab admin-function">
+            <a class="content-item" href="../../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
 
-    </form>
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../../other/about-us.html">About us</a>
+                <a class="content-item" href="../../other/contact.html">Contact</a>
+                <a class="content-item" href="../../other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
 
+<div class="row">
+    <div class="side">
+        <h2>About Us</h2>
+        <ul>
+            <li>
+                <a href="../../other/about-us.html">About us</a>
+            </li>
+            <li>
+                <a href="../../other/contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../../other/faq.html">FAQ</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+        <h1>Add Additional Form Pages</h1>
+        <form>
+            <label for="g_name">Enter Game Name : </label>
+            <input type="text" id="g_name" name="g_name"></br>
+
+            <label for="description">Enter Game Description: </label>
+            <input type="textarea" id="description" name="description"></br>
+
+            <label for="thumbnail">Thumbnail address: </label>
+            <input type="file" id="Thumbnail" name="thumbnail"></br>
+
+            <input type="submit" value="Submit">
+            <a href="./admin_post_list.html"><button type="button" onclick="return showConfirm()" style="margin:5px;">Cancel</button></a>
+
+        </form>
+    </div>
+</div>
 </body>
 </html>
