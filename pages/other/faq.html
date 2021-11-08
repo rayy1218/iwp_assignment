@@ -1,53 +1,114 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>FAQ</title>
-    
-    <link rel="stylesheet" href="./main.css" />
+    <link href="../../resource/style/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../resource/style/post7-8/main.css" />
+    <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/collapse-header.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
+        }
+    </script>
+
 </head>
+<body onload="initPage();">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
 
-<body>
-
-    <div class="container">
-        <div class="faq_container">
-        <h1>FREQUENTLY ASKED QUESTIONS</h1><br><br>
-            <div class="faq_down">
-                <button class="drop"><b>What is E-Sport</b></button>
-                <div class="panel">
-                    <p>A platform which will provide sufficient information and latest news about famous online games to gamers</p>
-                </div>
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../login-function/login-form.html">Login</a>
+                <a class="content-item" href="../login-function/register-form.html">Register</a>
             </div>
+        </div>
 
-            <div class="faq_down">
-                <button class="drop"><b>How Do I Sign Up</b></button>
-                <div class="panel">
-                    <p>Signing up to E-Sport is free and easy. <b>Must be 18 years or older</b></p>
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+    <div class="side">
+        <h2>About Us</h2>
+        <ul>
+            <li>
+                <a href="../other/about-us.html">About us</a>
+            </li>
+            <li>
+                <a href="../other/contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../other/faq.html">FAQ</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="faq_container">
+                <h1>FREQUENTLY ASKED QUESTIONS</h1><br><br>
+                <div class="faq_down">
+                    <button class="drop"><b>What is E-Sport</b></button>
+                    <div class="panel">
+                        <p>A platform which will provide sufficient information and latest news about famous online games to gamers</p>
+                    </div>
                 </div>
 
-            </div>
+                <div class="faq_down">
+                    <button class="drop"><b>How Do I Sign Up</b></button>
+                    <div class="panel">
+                        <p>Signing up to E-Sport is free and easy. <b>Must be 18 years or older</b></p>
+                    </div>
 
-            <div class="faq_down">
-                <button class="drop"><b>Does it cost anything to sign up</b></button>
-                <div class="panel">
-                    <p>No, E-Sport is completely free to sign up</p>
                 </div>
 
-            </div>
-			
-			<div class="faq_down">
-                <button class="drop"><b>Does E-Sport is safe</b></button>
-                <div class="panel">
-                    <p>Yes, its safe to use</b></p>
+                <div class="faq_down">
+                    <button class="drop"><b>Does it cost anything to sign up</b></button>
+                    <div class="panel">
+                        <p>No, E-Sport is completely free to sign up</p>
+                    </div>
+
+                </div>
+
+                <div class="faq_down">
+                    <button class="drop"><b>Does E-Sport is safe</b></button>
+                    <div class="panel">
+                        <p>Yes, its safe to use</b></p>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
+        <script src="../../resource/script/script.js"></script>
     </div>
-
-    <script src="./script.js"></script>
+</div>
 </body>
-
 </html>

@@ -1,7 +1,142 @@
-.content {
-    width: 90%;
-    margin: auto;
+*
+{
+    box-sizing: border-box;
 }
+body
+{
+    font-family: Arial;
+    margin: 0;
+    color: #C0B2D6;
+}
+.header
+{
+    padding: 80px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+.header h1
+{
+    font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+.navbar a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right
+{
+    float: right;
+}
+.navbar a:hover
+{
+    color: #C7C7C7;
+}
+.row
+{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.side
+{
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #2C2B2B;
+    padding: 20px;
+}
+.main
+{
+    -ms-flex: 70%;
+    flex: 70%;
+    padding: 20px;
+    background-color: #5C5B5B;
+}
+.info
+{
+    background-color: lightgrey;
+    padding: 20px;
+    width:30%;
+    -ms-flex: 70%;
+    color:black;
+    border-style:solid;
+    border-width:2px;
+    border-radius:15px;
+}
+.gameplay
+{
+    font-family: italic;
+    width:70%;
+
+}
+.footer
+{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+footer
+{
+    font-family: Arial;
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(36, 33, 34);
+    color: white;
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.footer-tab
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 14px 16px;
+    text-align: center;
+    display: inline;
+    float: left;
+    background-color: rgb(36, 33, 34);
+    text-decoration: none;
+    color: white;
+}
+a.footer
+{
+    background-color: rgb(36, 33, 34);
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+}  
+a.footer:hover
+{
+    background-color: rgb(17, 17, 17);
+}
+@media screen and (max-width: 700px)
+{
+    .row {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+.button
+{
+    color:black;
+}
+
 .username, .current_username {
     margin: 5px;
     font-weight: bold;
@@ -11,105 +146,25 @@
     width: 50px;
     height: 50px;
 }
-.header {
-	padding: 80px;
-    text-align: center;
-    background: blue;
-    color: white;
-    width: 100%;
-    border-bottom: black 2px solid;
-    display: inline-block;
-}
-.header h1 
-{
-    font-size: 40px;
-}
-.header nav {
-    float: right;
+
+.tab {
+    float: left;
+    width: 10%;
 }
 
-.header a {
-    color: black;
-    text-decoration-line: none;
-}*
-{
-    box-sizing: border-box;
-}
-.body 
-{
-    font-family: Arial;
-    margin: 0;
-	color: #C0B2D6;
-}
-.navbar {
-    overflow: hidden;
-    background-color: black;
-}
-.navbar a 
-{
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
+.collapse-menu, .content-item {
     padding: 14px 20px;
-    text-decoration: none;
-}
-.navbar a.right 
-{
-    float: right;
-}
-.navbar a:hover 
-{
-    background-color: #dde;
+    border: black 1px solid;
+    text-align: center;
+    background-color: black;
     color: white;
 }
-.row 
-{  
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-	color: white;
-}
-.side 
-{
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-	color:white;
-}
-.header-title {
-    float: left;
-    display: inline;
-    margin: 0;
-	color: white;
-}
 
-.navigation-tab {
-    padding: 10px;
-    float: left;
-	color: white;
+.collapse-menu-content {
+    position: absolute;
+    z-index: 99;
+    width: 10%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
 }
-
-.navigation-tab p {
-    margin: 0;
-	color: white;
-}
-
-.navigation-separator {
-    width: 20px;
-    float: left;
-}
-.white-text
-{
-	color:white;
-}
-.main
-{	
-	color:black;
-}
-footer {
-
-}
-

@@ -1,79 +1,143 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- Required meta tags -->
+    <title>Contact Us</title>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../../resource/style/global.css" rel="stylesheet">
+    <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/collapse-header.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
+        }
+    </script>
 
-    <title>Contact Us</title>
 </head>
+<body onload="initPage();" style="background-color:rgb(255,255,255);color: black;">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
 
-<body style="background-color:rgb(255,255,255);color: black;">
-    <div class="container text-center text-md-left">
-        <div class="row text-center text-md-left mt-3 pb-3">
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center">
-
-                <p>
-                    <h4>ADDRESS</h4>
-                </p>
-                <p>
-                    <h6 class="m-0">Main Office</h6>
-                    <p class="m-0" style="font-weight: 260;">Persiaran Multimedia, 63100 Cyberjaya, Selangor</p>                    
-                </p>              
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../login-function/login-form.html">Login</a>
+                <a class="content-item" href="../login-function/register-form.html">Register</a>
             </div>
+        </div>
 
-            <hr class="w-100 clearfix d-md-none">
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
+        </div>
 
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center">
-                <h6 class="text-uppercase mb-4 font-weight-bold ">
-                                                       
-                </h6>
-                <p >
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+    <div class="side">
+        <h2>About Us</h2>
+        <ul>
+            <li>
+                <a href="../other/about-us.html">About us</a>
+            </li>
+            <li>
+                <a href="../other/contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../other/faq.html">FAQ</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left mt-3 pb-3">
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center">
+
+                    <p>
+                    <h4>ADDRESS</h4>
+                    </p>
+                    <p>
+                    <h6 class="m-0">Main Office</h6>
+                    <p class="m-0" style="font-weight: 260;">Persiaran Multimedia, 63100 Cyberjaya, Selangor</p>
+                    </p>
+                </div>
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">
+
+                    </h6>
+                    <p >
                     <h4>PHONE</h4>
-                </p>
-                <p>
+                    </p>
+                    <p>
                     <h6 class="m-0">Tel</h6>
-                    <p class="m-0" style="font-weight: 250;">03-3191999</p>                    
-                </p>
-                <p>
+                    <p class="m-0" style="font-weight: 250;">03-3191999</p>
+                    </p>
+                    <p>
                     <h6 class="m-0">Fax</h6>
                     <p class="m-0" style="font-weight: 250;">03-3191999</p>
-                </p>            
-            </div>
-            <hr class="w-100 clearfix d-md-none">
+                    </p>
+                </div>
+                <hr class="w-100 clearfix d-md-none">
 
-           
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center">
-                <h6 class="text-uppercase mb-4 font-weight-bold ">
-                                                     
-                </h6>
-                <p >
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">
+
+                    </h6>
+                    <p>
                     <h4>EMAIL</h4>
-                </p>
-                <p>
+                    </p>
+                    <p>
                     <h6 class="m-0">Email 1</h6>
-                    <p class="m-0" style="font-weight: 250;">Esports@gmail.com</p>                    
-                </p>
-                <p>
+                    <p class="m-0" style="font-weight: 250;">Esports@gmail.com</p>
+                    </p>
+                    <p>
                     <h6 class="m-0">Email 2</h6>
                     <p class="m-0" style="font-weight: 250;">Webbing_dummies@gmail.com</p>
-                </p>              
+                    </p>
+                </div>
+
             </div>
-           
+            <hr>
+            <div id="googleMap" style="width:200%;height:50px;"></div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.606580945695!2d101.63952976475684!3d2.928867347866791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb6e4a9d3b7a1%3A0xd0f74e8ad10f1129!2sMultimedia%20University%20-%20MMU%20Cyberjaya!5e0!3m2!1sen!2smy!4v1636022181505!5m2!1sen!2smy" width="600" height="500" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>
+
         </div>
-        <hr>
-        <div id="googleMap" style="width:200%;height:50px; center-right"></div>
-		
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.606580945695!2d101.63952976475684!3d2.928867347866791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb6e4a9d3b7a1%3A0xd0f74e8ad10f1129!2sMultimedia%20University%20-%20MMU%20Cyberjaya!5e0!3m2!1sen!2smy!4v1636022181505!5m2!1sen!2smy" width="600" height="500" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>
-
     </div>
     </div>
-
+</div>
 </body>
-
 </html>
+

@@ -2,110 +2,55 @@
 <html>
 <head>
     <title>Homepage</title>
+    <link rel="stylesheet" href="./resource/style/global.css">
+    <script src="./resource/script/login.js"></script>
+    <script src="./resource/script/collapse-header.js"></script>
+    <script>
+        function initPage() {
+            initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
+        }
+    </script>
 </head>
-<style>
-*
-{
-    box-sizing: border-box;
-}
-body 
-{
-    font-family: Arial;
-    margin: 0;
-	color: #C0B2D6;
-}
-.header 
-{
-    padding: 80px;
-    text-align: center;
-    background: blue;
-    color: white;
-}
-.header h1 
-{
-    font-size: 40px;
-}
-.navbar {
-    overflow: hidden;
-    background-color: black;
-}
-.navbar a 
-{
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-.navbar a.right 
-{
-    float: right;
-}
-.navbar a:hover 
-{
-    background-color: #dde;
-    color: #C7C7C7;
-}
-.row 
-{  
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.side 
-{
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-.main 
-{   
-    -ms-flex: 70%;
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-}
-.fakeimg 
-{
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-.footer 
-{
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-}
-@media screen and (max-width: 700px) 
-{
-    .row {   
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 400px) 
-{
-    .navbar a {
-        float: none;
-        width: 100%;
-    }
-}
-</style>
-<body>
-<div class="header">
-<h1>=Dummies=</h1>
-<p>Game Introduction Web Site</p>
-</div>
-<div class="navbar">
-  <a href="#">Account</a>
-  <a href="#">Post</a>
-  <a href="#">Page</a>
-  <a href="#" class="right">Other</a>
-</div>
-<div class="row">
+
+<body onload="initPage()">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
+
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="./pages/login-function/login-form.html">Login</a>
+                <a class="content-item" href="./pages/login-function/register-form.html">Register</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="content-item" href="./pages/post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="./pages/post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="./pages/other/about-us.html">About us</a>
+                <a class="content-item" href="./pages/other/contact.html">Contact</a>
+                <a class="content-item" href="./pages/other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
+<span >
+    <div class="row">
   <div class="side">
       <h2>About Us</h2>
       <ul>
@@ -127,13 +72,13 @@ body
 	<a href="./pages/posts/post1.html">
     <img alt="Forza Horizon 4" src="https://static.wikia.nocookie.net/forzamotorsport/images/e/e3/FH4_Screenshot_3.jpg/revision/latest?cb=20180611101526" width="960" height="540">
     </a><br>
-	
+
 	<h2>Post-01</h2>
     <h5>Game Name</h5>
     <div class="fakeimg" style="height:200px;">Game img</div>
 	<a href="./pages/posts/post2.html">Read more</a>
     <br>
-	  
+
 	<h2>Post-02</h2>
     <h5>Game Name</h5>
     <div class="fakeimg" style="height:200px;">Game img</div>
@@ -141,5 +86,7 @@ body
     <br>
   </div>
 </div>
+</span>
+
 </body>
 </html>

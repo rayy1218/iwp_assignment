@@ -2,10 +2,18 @@
 <html>
 <head>
     <title>Apex Legends</title>
-    <link rel="stylesheet" href="../../resource/style/global.css">
     <link rel="stylesheet" href="../../resource/style/image-control.css">
-    <script src="../../resource/script/login.js"></script>
+    <link rel="stylesheet" href="../../resource/style/global.css">
+
+    <style>
+        .white-text {
+            color: white;
+        }
+    </style>
+
     <script src="../../resource/script/image-control.js"></script>
+    <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/collapse-header.js"></script>
     <script>
         let image = [
             "https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/ss_8731a6552dce7c9e9e6da79d6e42f62c4dcb835d.600x338.jpg?t=1635872526",
@@ -23,104 +31,132 @@
 
         function initPage() {
             initLogin();
-            doHideElementOnRole('user-function', 0);
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
+            doHideElementOnRole("button", 0);
             initImageControl(image);
         }
     </script>
-<body onload="initPage();">
-    <header>
-        <div>
-            <a href="../../index.html"><h1 class="header-title">Webpage title</h1></a>
-        </div>
-        <nav>
-            <div class="navigation-tab">
-                <a href="../post-function/post-list.html">Post List</a>
+</head>
+<body onload="initPage()">
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
+
+    </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../login-function/login-form.html">Login</a>
+                <a class="content-item" href="../login-function/register-form.html">Register</a>
             </div>
-
-            <div class="navigation-tab">
-                <a href="../other/about-us.html">About Us</a>
-            </div>
-
-            <div class="navigation-tab">
-                <a href="../other/contact.html">Contact</a>
-            </div>
-
-            <div class="navigation-tab">
-                <a href="../other/faq.html">FAQ</a>
-            </div>
-
-            <div class="navigation-separator">&nbsp</div>
-
-            <div class="navigation-tab non-user">
-                <a href="../login-function/login-form.html">Login</a>
-            </div>
-
-            <div class="navigation-tab non-user">
-                <a href="../login-function/register-form.html">Register</a>
-            </div>
-
-            <div class="navigation-tab user">
-                <a href="../../index.html" onclick="doLogout()">Logout</a>
-            </div>
-
-            <div class="navigation-tab">
-                <p id="debug-user-tab"></p>
-            </div>
-        </nav>
-    </header>
-    <div class="content">
-        <h1>Apex Legends</h1>
-
-        <div id="button-container">
-            <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
-            <div id="page-display"></div>
-            <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
-        </div>
-        <div class="img-container">
-            <img src="" alt="post img" class="post-img" id="image-display">
         </div>
 
-        <p>
-            Conquer with character in Apex Legends, a free-to-play Hero shooter where legendary characters with powerful
-            abilities team up to battle for fame & fortune on the fringes of the Frontier.
-        </p>
-        <p>
-            Master an ever-growing roster of diverse Legends, deep tactical squad play and bold new innovations that go
-            beyond the Battle Royale experience—all within a rugged world where anything goes. Welcome to the next
-            evolution of Hero Shooter.
-        </p>
-        <h3>Key features</h3>
-        <ul>
-            <li>
-                <strong>A Roster of Legendary Characters</strong> - Master a growing roster of powerful Legends, each with
-                their own unique personality, strengths and abilities that are easy to pick up but challenging to truly
-                master.
-            </li>
-            <li>
-                <strong>Build Your Crew</strong> -Choose your Legend and combine their unique skills together with other
-                players to form the ultimate crew.
-            </li>
-            <li>
-                <strong>Strategic Squad Play</strong>- Whether you're battling on a massive floating city in Battle Royale
-                or dueling in close-quarters Arenas, you'll need to think fast. Master your Legend's unique abilities and
-                coordinate with your teammates to discover new tactics and powerful combinations.
-            </li>
-            <li>
-                <strong>Innovative Combat</strong> - Master an expanding assortment of powerful weapons and equipment.
-                You'll need to move fast and learn the rhythms of each weapon to get the most of your arsenal. Plus change
-                it up in limited-time modes, and get ready for a boatload of new content each season.
-            </li>
-            <li>
-                <strong>Ever-Expanding Universe</strong> - Apex Legends takes place in an immersive universe where the
-                story continues to evolve, maps change each season, and new Legends keep joining the fight. Make your mark
-                on the Apex Games with a multitude of distinctive outfits and join the adventure!
-            </li>
-        </ul>
+        <div class="tab">
+            <a class="content-item" href="../post-list.html">Posts</a>
+        </div>
 
-        <div class="user-function">
-            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
-            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
+        <div class="tab admin-function">
+            <a class="content-item" href="./admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
         </div>
     </div>
+</header>
+
+<div class="row">
+    <div class="side">
+        <h2 class="white-text">About Us</h2>
+        <ul>
+            <li>
+                <a href="../other/about-us.html">About us</a>
+            </li>
+            <li>
+                <a href="../other/contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="../other/faq.html">FAQ</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main">
+        <h2>Apex Legend</h2>
+        <div class="info">
+            <h5>price=Free</h5>
+            <h5>Platform=PC</h5>
+            <h5>Publisher(s):Microsoft Studios</h5>
+            <h5>Genre(s)=Racing</h5>
+        </div>
+
+        <br>
+
+        <div class="gameplay">
+            <div id="button-container">
+                <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+                <div id="page-display"></div>
+                <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+            </div>
+            <div class="img-container">
+                <img src="" alt="post image" class="post-img" id="image-display">
+            </div>
+
+            <h2 class="white-text">Gameplay</h2>
+
+            <p>
+                Conquer with character in Apex Legends, a free-to-play Hero shooter where legendary characters with powerful
+                abilities team up to battle for fame & fortune on the fringes of the Frontier.
+            </p>
+            <p>
+                Master an ever-growing roster of diverse Legends, deep tactical squad play and bold new innovations that go
+                beyond the Battle Royale experience—all within a rugged world where anything goes. Welcome to the next
+                evolution of Hero Shooter.
+            </p>
+            <h2>Key features</h2>
+            <ul>
+                <li>
+                    <strong>A Roster of Legendary Characters</strong> - Master a growing roster of powerful Legends, each with
+                    their own unique personality, strengths and abilities that are easy to pick up but challenging to truly
+                    master.
+                </li>
+                <li>
+                    <strong>Build Your Crew</strong> -Choose your Legend and combine their unique skills together with other
+                    players to form the ultimate crew.
+                </li>
+                <li>
+                    <strong>Strategic Squad Play</strong>- Whether you're battling on a massive floating city in Battle Royale
+                    or dueling in close-quarters Arenas, you'll need to think fast. Master your Legend's unique abilities and
+                    coordinate with your teammates to discover new tactics and powerful combinations.
+                </li>
+                <li>
+                    <strong>Innovative Combat</strong> - Master an expanding assortment of powerful weapons and equipment.
+                    You'll need to move fast and learn the rhythms of each weapon to get the most of your arsenal. Plus change
+                    it up in limited-time modes, and get ready for a boatload of new content each season.
+                </li>
+                <li>
+                    <strong>Ever-Expanding Universe</strong> - Apex Legends takes place in an immersive universe where the
+                    story continues to evolve, maps change each season, and new Legends keep joining the fight. Make your mark
+                    on the Apex Games with a multitude of distinctive outfits and join the adventure!
+                </li>
+            </ul>
+
+        </div>
+        <div class="button">
+            <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment Here</button>
+            <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Send Screenshot</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>

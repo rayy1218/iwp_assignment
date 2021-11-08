@@ -1,119 +1,13 @@
 <!DOCTYPE html>
 <html>
-<!DOCTYPE html>
-<html>
 <head>
     <title>Post4</title>
-<style>
-*
-{
-    box-sizing: border-box;
-}
-body 
-{
-    font-family: Arial;
-    margin: 0;
-	color: #C0B2D6;
-}
-.header 
-{
-    padding: 80px;
-    text-align: center;
-    background: blue;
-    color: white;
-}
-.header h1 
-{
-    font-size: 40px;
-}
-.navbar {
-    overflow: hidden;
-    background-color: black;
-}
-.navbar a 
-{
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-.navbar a.right 
-{
-    float: right;
-}
-.navbar a:hover 
-{
-    background-color: #dde;
-    color: #C7C7C7;
-}
-.row 
-{  
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.side 
-{
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-.main 
-{   
-    -ms-flex: 70%;
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-}
-.info
-{
-	background-color: lightgrey;
-	padding: 20px;
-	width:30%;
-    -ms-flex: 70%;
-	color:black;
-	border-style:solid;
-	border-width:2px;
-	border-radius:15px;
-}
-.gameplay
-{
-	font-family: italic;
-	width:70%;
-	color:black;
-}
-.footer 
-{
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-}
-@media screen and (max-width: 700px) 
-{
-    .row {   
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 400px) 
-{
-    .navbar a {
-        float: none;
-        width: 100%;
-    }
-}
-.button
-{
-	color:black;
-}
-</style>
+
     <link rel="stylesheet" href="../../resource/style/global.css">
     <link rel="stylesheet" href="../../resource/style/image-control.css">
     <script src="../../resource/script/login.js"></script>
     <script src="../../resource/script/image-control.js"></script>
+    <script src="../../resource/script/collapse-header.js"></script>
     <script>
         let image = [
                      "../../resource/img/posts/post4/img1.jpg",
@@ -123,10 +17,12 @@ body
                      "../../resource/img/posts/post4/img5.png",
                      "../../resource/img/posts/post4/img6.png"
                     ];
-        //images format and name will be changed depnding on the img folder....tbc... also content need to be changed to avoid plagiarism
 
         function initPage() {
             initLogin();
+            initCollapseHeader();
+            doHideElementOnRole("admin-function", 0);
+            doHideElementOnRole("admin-function", 1);
             doHideElementOnRole('user-function', 0);
             initImageControl(image);
         }
@@ -134,127 +30,154 @@ body
 </head>
 
 <body onload="initPage();">
-    <header>
-<div class="navbar">
-  <a href="../login-function/Account-choose.html">Account</button>
-  <a href="../post-function/post-list.html">Post</a>
-  <a href="#">Page</a>
-  <a href="#" class="right">Other</a>
-</div>
+<header>
+    <div class="header">
+        <h1>=Dummies=</h1>
+        <p>Game Introduction Web Site</p>
 
-<div class="row">
-  <div class="side">
-      <h2 style="color:black;">About Us</h2>
-		<li>
-			<a href="../other/about-us.html">About us</a>
-		</li>
-		<li>
-			<a href="../other/contact.html">Contact</a>
-		</li>
-		<li>
-			<a href="../other/faq.html">FAQ</a>
-		</li>
-	</div>
-</div>
-
-	
-
-        
-  <div class="main">
-  <h2 style="color:black;">Dota 2</h2>
-	<div class="info">	  
-      <h5>price=US$0.00</h5>
-	  <h5>Platform=PC</h5>
-	  <h5>Publisher(s):Microsoft Studios</h5>
-	  <h5>Genre(s)=Racing</h5>
-	  
-	</div>
-	<div class="content">
-	<div id="button-container">
-    <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
-    <div id="page-display"></div>
-    <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
-</div>
-	<div class="img-container">
-    <img src="" alt="post image" class="post-img" id="image-display">
-</div>
-        <p>
-            In Dota 2, two teams of five players are matched against each other on a map with two different 
-            bases that need to be occupied or defended. Before every match each player gets to choose a powerful 
-            character from a big roster of 115 different “Heroes”, all with different abilities, strengths and weaknesses.
-        </p>
-        <p>
-            During the game, players collect experience points to level up their characters by performing different 
-            feats, such as killing another hero or progressing closer towards the enemy base by killing defense towers. 
-            According to their performance, players can collect and earn gold. This is a very vital part of the game as 
-            earning gold will allow you to buy items for your character that can vastly improve your characters’ 
-            effectiveness. The first team to destroy the opposing team’s base will be crowned winners.
-        </p>
-        
-        <h3>How To Play Dota 2 ? </h3>
-        <p>
-            The main goal of Dota 2 is to destroy the enemy’s ancient building, which is the biggest building inside of your 
-            team’s base, and by doing this you’ll win the game. The two different teams need to pick one individual hero to 
-            play during the entire match. It’s important for players to pick a character you are willing to stick to, because 
-            once you’ve picked your hero there’s no turning back until the next game.
-        </p>
-        <p>
-            The map has 3 different lanes (left, mid and right) that leads from one team’s base to the other. Players then 
-            decide with their teammates which of their lanes will be your focus at the start of the game. In these lanes, players 
-            will run into defense towers and non-player characters (creeps) which need to be killed to gather experience points and 
-            gold.
-        </p>
-        <p>
-            By killing these creeps and destroying defense towers, you’ll help your team to progress closer to the enemy base. 
-            As a player focusing on a lane, as is the enemy team, this is where the player versus player action begins.
-        </p>
-        <p>
-            All heroes are very weak at the beginning of each game, hence the importance of gathering experience and gold. The 
-            experience points are used to level up your character and when leveling up you can acquire new abilities or upgrade     
-            the ones you already have. With gold, you can buy items that can give you a higher damage power, quicker run speed 
-            or similar and the more expensive items can even grant you extra abilities that can help you turn the battlefield 
-            into your favour.
-        </p>
-        <p>
-            However, to gather gold from the creeps, you need to be the player that does the killing blow. If you don’t get the 
-            killing blow, no gold will be awarded. You can also deny your enemies their killing blows on your own creeps by making 
-            sure that you kill them yourself, just before the enemy hero is lining up a killing blow. This is an amazing way of denying 
-            your enemy gold, but also experience as only 70% of the creeps regular experience will be rewarded to your enemies, and the 
-            remaining 30% will be rewarded to your team.
-        </p>
-        <p>
-            So, early in game, focusing on getting last hits on creeps and denying your enemies to farm gold and experience is a great 
-            way of gaining a huge advantage in the game. This is due to heroes being weak in the early game, and if one of the team manages
-            to get one or two levels above their opponents it’s very easy to continue to slay them as your willpower increases at a higher 
-            rate than your enemies. 
-        </p>
-        <p>    
-            This is often referred to as “snowballing”, since you are taking advantage of being the more powerful hero and utilizing this 
-            momentum to keep growing stronger. One good way for the enemy team to hinder a snowballing hero is to put a lot of effort in 
-            making sure that the hero gets killed. By killing a hero with a strong gold grind or a hero that’s on a kill streak, the rewards 
-            are higher than normal which gives the team a small opportunity to catch up and even out the odds.
-        </p>
-        <p>
-            If you, as a player are unfortunate enough to end up in a lane where the enemy hero is starting to snowball, you could be the 
-            one that enables him to do this. This is called “feeding” and is one of the worst things you can do in the game.
-        </p>
-        <p>
-            If you notice that you have begun to “feed” the enemy hero by allowing him to continuously kill you, you need to make some 
-            changes to your play style and either ask for help from your teammates to rush your lane and help you end the enemies’ killing 
-            spree, or you simply need to make sure to not engage in fights you don’t believe you can win. Sometimes running away can be a 
-            much better strategy than to pick fights you’re not comfortable in.
-        </p>
-        <p>
-            After this early stage of the game it’s time for “Mid game”. This is when the team try to make efforts to push their lanes and
-            get rid of as many defense towers as possible. It’s also pretty common that players start to try “ganking” enemy heroes by leaving 
-            their lanes and try their best to flank the enemy heroes by coming up behind them and attack them together at the same time to get 
-            quick kills.
-        </p>
-        <p>
-            This is a great way to get some more map control and push further into your lanes. But be careful, if you leave your lane to gank 
-            another, you are leaving your own lane without proper defence, and the enemy could also use this as a counter to push your lane 
-            closer to your base.
-       </p>
     </div>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../login-function/login-form.html">Login</a>
+                <a class="content-item" href="../login-function/register-form.html">Register</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="row">
+          <div class="side">
+              <h2 style="color:black;">About Us</h2>
+                <li>
+                    <a href="../other/about-us.html">About us</a>
+                </li>
+                <li>
+                    <a href="../other/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../other/faq.html">FAQ</a>
+                </li>
+            </div>
+
+            <div class="main">
+                <h2 style="color:black;">Dota 2</h2>
+                <div class="info">
+                    <h5>price=US$0.00</h5>
+                    <h5>Platform=PC</h5>
+                    <h5>Publisher(s):Microsoft Studios</h5>
+                    <h5>Genre(s)=Racing</h5>
+                </div>
+                <div id="button-container">
+                    <button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+                    <div id="page-display"></div>
+                    <button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+                </div>
+                <div class="img-container">
+                    <img src="" alt="post image" class="post-img" id="image-display">
+                </div>
+
+                <p>
+                    In Dota 2, two teams of five players are matched against each other on a map with two different
+                    bases that need to be occupied or defended. Before every match each player gets to choose a powerful
+                    character from a big roster of 115 different “Heroes”, all with different abilities, strengths and weaknesses.
+                </p>
+                <p>
+                    During the game, players collect experience points to level up their characters by performing different
+                    feats, such as killing another hero or progressing closer towards the enemy base by killing defense towers.
+                    According to their performance, players can collect and earn gold. This is a very vital part of the game as
+                    earning gold will allow you to buy items for your character that can vastly improve your characters’
+                    effectiveness. The first team to destroy the opposing team’s base will be crowned winners.
+                </p>
+
+                <h3>How To Play Dota 2 ? </h3>
+                <p>
+                    The main goal of Dota 2 is to destroy the enemy’s ancient building, which is the biggest building inside of your
+                    team’s base, and by doing this you’ll win the game. The two different teams need to pick one individual hero to
+                    play during the entire match. It’s important for players to pick a character you are willing to stick to, because
+                    once you’ve picked your hero there’s no turning back until the next game.
+                </p>
+                <p>
+                    The map has 3 different lanes (left, mid and right) that leads from one team’s base to the other. Players then
+                    decide with their teammates which of their lanes will be your focus at the start of the game. In these lanes, players
+                    will run into defense towers and non-player characters (creeps) which need to be killed to gather experience points and
+                    gold.
+                </p>
+                <p>
+                    By killing these creeps and destroying defense towers, you’ll help your team to progress closer to the enemy base.
+                    As a player focusing on a lane, as is the enemy team, this is where the player versus player action begins.
+                </p>
+                <p>
+                    All heroes are very weak at the beginning of each game, hence the importance of gathering experience and gold. The
+                    experience points are used to level up your character and when leveling up you can acquire new abilities or upgrade
+                    the ones you already have. With gold, you can buy items that can give you a higher damage power, quicker run speed
+                    or similar and the more expensive items can even grant you extra abilities that can help you turn the battlefield
+                    into your favour.
+                </p>
+                <p>
+                    However, to gather gold from the creeps, you need to be the player that does the killing blow. If you don’t get the
+                    killing blow, no gold will be awarded. You can also deny your enemies their killing blows on your own creeps by making
+                    sure that you kill them yourself, just before the enemy hero is lining up a killing blow. This is an amazing way of denying
+                    your enemy gold, but also experience as only 70% of the creeps regular experience will be rewarded to your enemies, and the
+                    remaining 30% will be rewarded to your team.
+                </p>
+                <p>
+                    So, early in game, focusing on getting last hits on creeps and denying your enemies to farm gold and experience is a great
+                    way of gaining a huge advantage in the game. This is due to heroes being weak in the early game, and if one of the team manages
+                    to get one or two levels above their opponents it’s very easy to continue to slay them as your willpower increases at a higher
+                    rate than your enemies.
+                </p>
+                <p>
+                    This is often referred to as “snowballing”, since you are taking advantage of being the more powerful hero and utilizing this
+                    momentum to keep growing stronger. One good way for the enemy team to hinder a snowballing hero is to put a lot of effort in
+                    making sure that the hero gets killed. By killing a hero with a strong gold grind or a hero that’s on a kill streak, the rewards
+                    are higher than normal which gives the team a small opportunity to catch up and even out the odds.
+                </p>
+                <p>
+                    If you, as a player are unfortunate enough to end up in a lane where the enemy hero is starting to snowball, you could be the
+                    one that enables him to do this. This is called “feeding” and is one of the worst things you can do in the game.
+                </p>
+                <p>
+                    If you notice that you have begun to “feed” the enemy hero by allowing him to continuously kill you, you need to make some
+                    changes to your play style and either ask for help from your teammates to rush your lane and help you end the enemies’ killing
+                    spree, or you simply need to make sure to not engage in fights you don’t believe you can win. Sometimes running away can be a
+                    much better strategy than to pick fights you’re not comfortable in.
+                </p>
+                <p>
+                    After this early stage of the game it’s time for “Mid game”. This is when the team try to make efforts to push their lanes and
+                    get rid of as many defense towers as possible. It’s also pretty common that players start to try “ganking” enemy heroes by leaving
+                    their lanes and try their best to flank the enemy heroes by coming up behind them and attack them together at the same time to get
+                    quick kills.
+                </p>
+                <p>
+                    This is a great way to get some more map control and push further into your lanes. But be careful, if you leave your lane to gank
+                    another, you are leaving your own lane without proper defence, and the enemy could also use this as a counter to push your lane
+                    closer to your base.
+                </p>
+
+                <div class="user-function">
+                    <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
+                    <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
+                </div>
+            </div>
+        </div>
+
 </body>
 </html>

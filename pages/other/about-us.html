@@ -1,37 +1,92 @@
-<!DOCTYPE html >
- 
-<html >
-<head>
-<title>About Us</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-<div id="wrapper">
-        <div id="header">
-                
-        <h1>ABOUT US</a></h1>
-                
-        </div>
-        
-        <div id="page">
-                <div id="content">
-                        <div class="box">
-                                <h2>E-SPORTS</h2>
-                                <p>
-                                     Founded in 2021, E-Sports is a Malaysian Company founded by Webbing For Dummies Groups.
-									 The Company is Headquartered in Cyberjaya,Malaysia.Today E-Sport is a leading 
-									 entertainment company. We are providing latest news or information about Games
-									 which are famous among gamers. This Service is completely free because we need all the gamers have to up to date about any latest games. That is our mission.
-                                </p>
-								
-								
-                        </div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link href="../../resource/style/global.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../resource/style/post7-8/style.css">
+        <script src="../../resource/script/login.js"></script>
+        <script src="../../resource/script/collapse-header.js"></script>
+        <script>
+            function initPage() {
+                initLogin();
+                initCollapseHeader();
+                doHideElementOnRole("admin-function", 0);
+                doHideElementOnRole("admin-function", 1);
+            }
+        </script>
+    </head>
+    <body onload="initPage();">
+    <header>
+        <div class="header">
+            <h1>=Dummies=</h1>
+            <p>Game Introduction Web Site</p>
 
+        </div>
+        <div class="navbar">
+            <div class="tab">
+                <div class="collapse-menu white-text">Account</div>
+                <div class="collapse-menu-content">
+                    <a class="content-item" href="../login-function/login-form.html">Login</a>
+                    <a class="content-item" href="../login-function/register-form.html">Register</a>
                 </div>
-               
-        </div>
-    
-</div>
+            </div>
 
-</body>
+            <div class="tab">
+                <a class="content-item" href="../post-function/post-list.html">Posts</a>
+            </div>
+
+            <div class="tab admin-function">
+                <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+            </div>
+
+            <div class="tab" style="float: right">
+                <div class="collapse-menu white-text">Other</div>
+                <div class="collapse-menu-content">
+                    <a class="content-item" href="../other/about-us.html">About us</a>
+                    <a class="content-item" href="../other/contact.html">Contact</a>
+                    <a class="content-item" href="../other/faq.html">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="side">
+            <h2>About Us</h2>
+            <ul>
+                <li>
+                    <a href="../other/about-us.html">About us</a>
+                </li>
+                <li>
+                    <a href="../other/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../other/faq.html">FAQ</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="main">
+            <div id="wrapper">
+                <div id="local-header">
+                    <h1>ABOUT US</a></h1>
+                </div>
+                <div id="page">
+                    <div id="content">
+                        <div class="box">
+                            <h2>E-SPORTS</h2>
+                            <p>
+                                Founded in 2021, E-Sports is a Malaysian Company founded by Webbing For Dummies Groups.
+                                The Company is Headquartered in Cyberjaya,Malaysia.Today E-Sport is a leading
+                                entertainment company. We are providing latest news or information about Games
+                                which are famous among gamers. This Service is completely free because we need all the gamers have to up to date about any latest games. That is our mission.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
 </html>
