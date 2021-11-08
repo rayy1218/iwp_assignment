@@ -11,7 +11,7 @@ body
     margin: 0;
 	background-color:#5C5B5B;
 }
-input[type=text],input[type=password] ,input[type=number] 
+input[type=text],input[type=password] ,input[type=number]
 {
 	width: 100%;
 	padding: 12px 20px;
@@ -20,14 +20,13 @@ input[type=text],input[type=password] ,input[type=number]
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 70%;
 }
 b
 {
 	color:white;
 	font-size:20px;
 }
-button 
+button
 {
 	background-color: blue;
 	color: white;
@@ -35,13 +34,18 @@ button
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 70%;
+	width: 100%;
 	font-size:20px;
-}	
-button:hover 
+}
+button:hover
 {
 	font-size:20px;
 	opacity: 0.7;
+}
+
+.container {
+	margin: auto;
+	width: 70%;
 }
 </style>
 	<script src="../../resource/script/login.js"></script>
@@ -52,23 +56,23 @@ button:hover
 		<label for="uname"><b>Username: </b></label><br>
 		<input type="text" placeholder="Enter Username" id="uname" name="uname" required>
 		<br>
-		
+
 		<label for="email"><b>Email: </b></label><br>
 		<input type="text" placeholder="Enter Email" id="email" name="email" required>
 		<br>
-		
+
 		<label for="psw"><b>Password: </b></label><br>
 		<input type="password" placeholder="Enter Password" id="psw" name="psw" required>
 		<br>
-        
+
 		<label for="psw2"><b>Re-enter Password: </b></label><br>
 		<input type="password" placeholder="Enter Password" id="psw2" name="psw2" required>
 		<br>
-		
+
 		<label for="age"><b>Age: </b></label><br>
 		<input type="number" min="0" placeholder="Enter Age" id="age" name="age" required>
 		<br>
-		
+
 		<button type="submit" onclick="return doRegister();">register</button>
     </div>
   </form>

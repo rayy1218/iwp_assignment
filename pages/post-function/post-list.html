@@ -5,23 +5,49 @@
     <link rel="stylesheet" href="../../resource/style/global.css">
     <link rel="stylesheet" href="../../resource/style/post-list.css">
     <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/header.js"></script>
     <script>
         function initPage() {
             initLogin();
+            initHeader();
         }
     </script>
 
 </head>
 <body onload="initPage();">
 <header>
-    <div class="header">
-        <h1>=Dummies=</h1>
-        <p>Game Introduction Web Site</p>
-    </div>
+    <a href="../../index.html" class="homepage-navi">
+        <div class="header">
+            <h1>=Dummies=</h1>
+            <p>Game Introduction Web Site</p>
+        </div>
+    </a>
     <div class="navbar">
-        <a href="../login-function/Account-choose.html">Account</a>
-        <a href="../post-function/post-list.html">Post</a>
-        <a href="#" class="right">Other</a>
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item non-user-function" href="../login-function/login-form.html">Login</a>
+                <a class="content-item non-user-function" href="../login-function/register-form.html">Register</a>
+                <a class="content-item user-admin-function" href="../../index.html" onclick="doLogout();">Logout</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="content-item" href="./post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="./admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -45,44 +71,61 @@
     <div class="main">
         <h1>Post List</h1>
         <div id="post-list">
-            <div class="post-list-item">
-                <img src="../../resource/img/post1.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post1.html" class="post-anchor"><h2>Forza Horizon 4</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post1.html'">
+                <img src="../../resource/img/post1.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Forza Horizon 4</p>
+                </div>
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post2.png" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post2.html" class="post-anchor"><h2>Minecraft</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post2.html'">
+                <img src="../../resource/img/post2.png" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Minecraft</p>
+                </div>
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post3.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post3.html" class="post-anchor"><h2>Counter-Strike: Global Offensive</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post3.html'">
+                <img src="../../resource/img/post3.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Counter Strike: Global Offensive</p>
+                </div>
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post4.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post4.html" class="post-anchor"><h2>Dota 2</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post4.html'">
+                <img src="../../resource/img/post4.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Dota 2</p>
+                </div>
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post5.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post5.html" class="post-anchor"><h2>Apex Legend</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post5.html'">
+                <img src="../../resource/img/post5.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Apex Legends</p>
+                </div>
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post6.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post6.html" class="post-anchor"><h2>OSU!</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post6.html'">
+                <img src="../../resource/img/post6.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">osu!</p>
+                </div>
+
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post7.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post7.html" class="post-anchor"><h2>Among Us</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post7.html'">
+                <img src="../../resource/img/post7.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Among Us</p>
+                </div>
             </div>
 
-            <div class="post-list-item">
-                <img src="../../resource/img/post8.jpg" alt="post thumbnail" width="960" height="540">
-                <a href="../../pages/posts/post8.html" class="post-anchor"><h2>GTA 5</h2></a>
+            <div class="post-list-item" onclick="location.href= '../../pages/posts/post8.html'">
+                <img src="../../resource/img/post8.jpg" alt="post thumbnail">
+                <div class="anchor-container">
+                    <p class="post-anchor">Grand Theft Auto 5</p>
+                </div>
             </div>
         </div>
     </div>

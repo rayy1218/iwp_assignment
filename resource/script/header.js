@@ -1,3 +1,13 @@
+function initHeader() {
+    initCollapseHeader();
+
+    doHideElementOnRole("admin-function", 0);
+    doHideElementOnRole("admin-function", 1);
+    doHideElementOnRole("user-admin-function", 0);
+    doHideElementOnRole("non-user-function", 1);
+    doHideElementOnRole("non-user-function", 2);
+}
+
 function initCollapseHeader() {
     let tab_node = document.getElementsByClassName("tab");
     for (let i = 0; i < tab_node.length; i += 1) {

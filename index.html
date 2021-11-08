@@ -4,30 +4,31 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="./resource/style/global.css">
     <script src="./resource/script/login.js"></script>
-    <script src="./resource/script/collapse-header.js"></script>
+    <script src="resource/script/header.js"></script>
     <script>
         function initPage() {
             initLogin();
-            initCollapseHeader();
-            doHideElementOnRole("admin-function", 0);
-            doHideElementOnRole("admin-function", 1);
+            initHeader();
         }
     </script>
 </head>
 
 <body onload="initPage()">
 <header>
-    <div class="header">
-        <h1>=Dummies=</h1>
-        <p>Game Introduction Web Site</p>
+    <a href="./index.html" class="homepage-navi">
+        <div class="header">
+            <h1>=Dummies=</h1>
+            <p>Game Introduction Web Site</p>
+        </div>
+    </a>
 
-    </div>
     <div class="navbar">
         <div class="tab">
             <div class="collapse-menu white-text">Account</div>
             <div class="collapse-menu-content">
-                <a class="content-item" href="./pages/login-function/login-form.html">Login</a>
-                <a class="content-item" href="./pages/login-function/register-form.html">Register</a>
+                <a class="content-item non-user-function" href="./pages/login-function/login-form.html">Login</a>
+                <a class="content-item non-user-function" href="./pages/login-function/register-form.html">Register</a>
+                <a class="content-item user-admin-function" href="./index.html" onclick="doLogout();">Logout</a>
             </div>
         </div>
 

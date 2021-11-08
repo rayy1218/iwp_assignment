@@ -4,20 +4,26 @@
     <title>Post3</title>
     <link rel="stylesheet" href="../../resource/style/image-control.css">
     <link rel="stylesheet" href="../../resource/style/global.css">
+
 	<script src="../../resource/script/login.js"></script>
 	<script src="../../resource/script/image-control.js"></script>
+    <script src="../../resource/script/header.js"></script>
 	<script>
 		let image = [
-                     "../../resource/img/posts/post3/img1.jpg",
-                     "../../resource/img/posts/post3/img2.jpg",
-                     "../../resource/img/posts/post3/img3.jpg",
-                     "../../resource/img/posts/post3/img4.jpg",
-                     "../../resource/img/posts/post3/img5.jpg",
-                     "../../resource/img/posts/post3/img6.jpg"
-                    ];
+            "../../resource/img/posts/post3/img1.jpg",
+            "../../resource/img/posts/post3/csgo-1.jpg",
+            "../../resource/img/posts/post3/csgo-2.jpg",
+            "../../resource/img/posts/post3/csgo-3.jpg",
+            "../../resource/img/posts/post3/img2.jpg",
+            "../../resource/img/posts/post3/img3.jpg",
+            "../../resource/img/posts/post3/img4.jpg",
+            "../../resource/img/posts/post3/img5.jpg",
+            "../../resource/img/posts/post3/img6.jpg"
+        ];
 		
 		function initPage() {
 			initLogin();
+            initHeader();
 			doHideElementOnRole("user-function", 0);
 			initImageControl(image);
 		}
@@ -25,32 +31,56 @@
 </head>
 
 <body onload="initPage();">
-    <header>
+<header>
+    <a href="../../index.html" class="homepage-navi">
         <div class="header">
             <h1>=Dummies=</h1>
             <p>Game Introduction Web Site</p>
-
+        </div>
+    </a>
+    <div class="navbar">
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item non-user-function" href="../login-function/login-form.html">Login</a>
+                <a class="content-item non-user-function" href="../login-function/register-form.html">Register</a>
+                <a class="content-item user-admin-function" href="../../index.html" onclick="doLogout();">Logout</a>
+            </div>
         </div>
 
-        <div class="navbar">
-          <a href="../login-function/Account-choose.html">Account</a>
-          <a href="../post-function/post-list.html">Post</a>
-          <a href="#">Page</a>
-          <a href="#" class="right">Other</a>
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
         </div>
-    </header>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+</header>
         <div class="row">
           <div class="side">
               <h2 style="color:black;">About Us</h2>
-                <li>
-                    <a href="../other/about-us.html">About us</a>
-                </li>
-                <li>
-                    <a href="../other/contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="../other/faq.html">FAQ</a>
-                </li>
+              <ul>
+                  <li>
+                      <a href="../other/about-us.html">About us</a>
+                  </li>
+                  <li>
+                      <a href="../other/contact.html">Contact</a>
+                  </li>
+                  <li>
+                      <a href="../other/faq.html">FAQ</a>
+                  </li>
+              </ul>
+
             </div>
 		
     	    <div class="main">
@@ -88,7 +118,7 @@
             <h3>Game Modes</h3>
             <ul>
                 <li>
-                    <strong>Deathmatch</strong></br>
+                    <strong>Deathmatch</strong><br>
                     <p>
                         The forever returning deathmatch. Team deathmatch has been a staple in first-person
                         shooter games since the likes of Doom and Quake. The game mode pits two different teams against each other with
@@ -97,7 +127,7 @@
                     </p>
                 </li>
                 <li>
-                    <strong>Arms Race</strong></br>
+                    <strong>Arms Race</strong><br>
                     <p>
                         In Arms Race, there are no teams. It’s you against everyone else and you are not allowed to pick your own
                         weapon. On spawn, a weapon is assigned to you, and to accumulate new weapons, you have to get a kill with the weapon
@@ -107,7 +137,7 @@
                     </p>
                 </li>
                 <li>
-                    <strong>Demolition</strong></br>
+                    <strong>Demolition</strong><br>
                     <p>
                         This is the game mode that is used when playing in competitive matches. Here the counter-terrorist and terrorist
                         are given objectives of either defusing or planting a bomb. Teams are 5v5 and there’s no respawn on death.
@@ -121,7 +151,7 @@
                     </p>
                 </li>
                 <li>
-                    <strong>Casual</strong></br>
+                    <strong>Casual</strong><br>
                     <p>
                         In this game mode the matches can be up to 10v10 and it’s up to the team playing counter-terrorist to either defuse
                         the bomb if planted, or rescue hostages. This game mode is limited to a maximum of 15 rounds, and the first team to
@@ -132,7 +162,7 @@
                     </p>
                 </li>
                 <li>
-                    <strong>Competitive</strong></br>
+                    <strong>Competitive</strong><br>
                     <p>
                         The competitive mode is where the real action happens. You will not be able to join this game mode until you’ve reached a
                         certain level of experience, which you can reach by playing the other modes.
@@ -168,10 +198,10 @@
 	    </div>
     <footer>
         <h1>Intro to E-Sports</h1>
-        <p style="font-size: 13px;">Intro to E-Sports is a website create by a group of MMU Students namely by the following :-</br>
-            <b>Chua Siong Yong, Suthent Tamilselvam, Yong Sheng Kai, and Tham Kim Lik.</b></br>
-            Without these Amazing Members, this website wouldn't be a success.</br>
-            Once again, I would like to Thank Everyone for their hardwork.</br>
+        <p style="font-size: 13px;">Intro to E-Sports is a website create by a group of MMU Students namely by the following :-<br>
+            <b>Chua Siong Yong, Suthent Tamilselvam, Yong Sheng Kai, and Tham Kim Lik.</b><br>
+            Without these Amazing Members, this website wouldn't be a success.<br>
+            Once again, I would like to Thank Everyone for their hardwork.<br>
         </p>
         <nav>
             <div class="footer-tab">

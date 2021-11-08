@@ -30,7 +30,7 @@ h2{
 #local-header {
         /*height: 75px;*/
         position: relative;
-        background: #6E6E6E url(images/img03.jpg) top left no-repeat;
+        background: #6E6E6E top left no-repeat;
         padding: 45px;
         color: #FFFFFF;
         /*width: 888px;*/

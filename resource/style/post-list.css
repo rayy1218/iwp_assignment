@@ -8,28 +8,46 @@
 
 .post-list-item {
     width: 90%;
-    height: 300px;
     border: 2px solid black;
     margin: 5px 0 5px 0;
-    float: left;
-    background-color: #5C5B5B;
-	
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .post-list-item img {
-    width: 480px;
-    height: 270px;
-    margin: 2px;
-    float: left;
-	
+    width: 100%;
+    transition: opacity 0.5s;
 }
-.post-list-item a {
-    color:white;
+
+.post-list-item img:hover {
+    opacity: 20%;
+}
+
+.anchor-container {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    opacity: 0;
+}
+
+.anchor-container p {
+    margin: 0;
+}
+
+.post-list-item:hover .anchor-container {
+    opacity: 100%;
 }
 
 .post-anchor {
     color: black;
+    z-index: 99;
     text-decoration-line: none;
+
 }
 
 .post-anchor h2 {

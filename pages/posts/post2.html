@@ -3,24 +3,61 @@
 <head>
     <title>Post2</title>
 	<link rel="stylesheet" href="../../resource/style/global.css">
+	<link href="../../resource/style/image-control.css" rel="stylesheet">
 	<script src="../../resource/script/login.js"></script>
+	<script src="../../resource/script/header.js"></script>
+	<script src="../../resource/script/image-control.js"></script>
 	<script>
+		let image = [
+			"../../resource/img/posts/post2/minecraft-1.png",
+			"../../resource/img/posts/post2/minecraft-2.png",
+			"../../resource/img/posts/post2/minecraft-3.png"
+		]
+
 		function initPage() {
 			initLogin();
+			initHeader();
 			doHideElementOnRole("user-function", 0);
+			initImageControl(image);
 		}
 	</script>
 </head>
 <body onload="initPage();">
-<div class="header">
-<h1>=Dummies=</h1>
-<p>Game Introduction Web Site</p>
-</div>
-<div class="navbar">
-  <a href="../login-function/Account-choose.html">Account</a>
-  <a href="../post-function/post-list.html">Post</a>
-  <a href="#" class="right">Other</a>
-</div>
+<header>
+	<a href="../../index.html" class="homepage-navi">
+		<div class="header">
+			<h1>=Dummies=</h1>
+			<p>Game Introduction Web Site</p>
+		</div>
+	</a>
+	<div class="navbar">
+		<div class="tab">
+			<div class="collapse-menu white-text">Account</div>
+			<div class="collapse-menu-content">
+				<a class="content-item non-user-function" href="../login-function/login-form.html">Login</a>
+				<a class="content-item non-user-function" href="../login-function/register-form.html">Register</a>
+				<a class="content-item user-admin-function" href="../../index.html" onclick="doLogout();">Logout</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a class="content-item" href="../post-function/post-list.html">Posts</a>
+		</div>
+
+		<div class="tab admin-function">
+			<a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+		</div>
+
+		<div class="tab" style="float: right">
+			<div class="collapse-menu white-text">Other</div>
+			<div class="collapse-menu-content">
+				<a class="content-item" href="../other/about-us.html">About us</a>
+				<a class="content-item" href="../other/contact.html">Contact</a>
+				<a class="content-item" href="../other/faq.html">FAQ</a>
+			</div>
+		</div>
+	</div>
+</header>
 
 <div class="row">
   <div class="side">
@@ -39,55 +76,65 @@
 </div>
 <div class="main">
   <h2 style="color:black;">Minecraft</h2>
-	<div class="info">	  
+	<div class="info">
       <h5>price=US$26.95 </h5>
 	  <h5>Platform=Xbox,PC,Phone,Play Station</h5>
 	  <h5>Publisher(s):Mojang Studios,Xbox Game Studios (Bedrock Edition),4J Studios (Konsoleneditionen),Other Ocean Interactive (New Nintendo 3DS Edition)</h5>
 	  <h5>Genre(s)=	Sandbox-Spiel,Survival-Spiel</h5>
 	</div>
 	<br>
-	  <img src="https://www.pcgamesn.com/wp-content/uploads/2018/07/Games-like-Minecraft-header-new.jpg" width="960" height="540">
-	  <br>	
-	<div class="gameplay">	
+	  <br>
+	<div class="gameplay">
+
+		<div id="button-container">
+			<button type="button" onclick="previousImage()" class="img-control-button">Previous</button>
+			<div id="page-display"></div>
+			<button type="button" onclick="nextImage()" class="img-control-button">Next</button>
+		</div>
+		<div class="img-container">
+			<img src="" alt="post image" class="post-img" id="image-display">
+		</div>
+
 		<h2>Gameplay</h2>
+
 		<h3>Minecraft is an open world game without a fixed goal.
-		The main focus is on exploring and discovering the game world with its caves and dungeons, as well as building your own buildings and devices. 
+		The main focus is on exploring and discovering the game world with its caves and dungeons, as well as building your own buildings and devices.
 		The player can mine raw materials ("mine"), process them into other objects ("craft") and fight against monsters.However, the game provides a n	umber of tasks (so-called "progress"), which, among other things, should make it easier to get started with the game.
 		Minecraft is played from first person perspective by default, but with the option to switch to third person perspective.
-		The player can move freely in the Minecraft game world. 
+		The player can move freely in the Minecraft game world.
 		<br><br>
 		It is generated procedurally and, in the Java edition, is practically infinite (but from version 1.7.9 onwards it is limited to a frame of 60 million blocks in width to prevent problems with the floating point calculation; however, the world can still be viewed as infinite) .
-		The worlds in all other versions are spatially limited. 
-		Any number of different worlds can be saved. 
-		These consist for the most part of cube-shaped blocks with a side length of one virtual meter, which are arranged according to a grid. 
+		The worlds in all other versions are spatially limited.
+		Any number of different worlds can be saved.
+		These consist for the most part of cube-shaped blocks with a side length of one virtual meter, which are arranged according to a grid.
 		<br><br>
 		The blocks each consist of a material such as earth, wood or various ores.
 		Almost all blocks are degradable and can be added to the inventory.
-		They can be dropped off almost anywhere in the world. 
+		They can be dropped off almost anywhere in the world.
 		Blocks can also be combined in different variations and thus enable the construction of tools, weapons and armor, among other things.
-		Combining the objects is a central aspect in Minecraft and is called crafting. 
-		The starting materials have to be arranged in a production field according to a certain pattern so that a certain object is created from it. 
-		For example, a chest can be made from an O-shaped pattern of wooden boards. 
+		Combining the objects is a central aspect in Minecraft and is called crafting.
+		The starting materials have to be arranged in a production field according to a certain pattern so that a certain object is created from it.
+		For example, a chest can be made from an O-shaped pattern of wooden boards.
 		Since version 1.12 there is a recipe book, which should make the production easier for the players.
 		<br><br>
-		Minecraft has an inventory system, so the player can carry a maximum of 36 different stacks of items of between 1, 16 and 64 units depending on the item. 
-		In the event of death, all items in the inventory are dropped. 
-		After the player respawns, these can be collected again within a limited time (5 minutes). 
-		Experience points can be gained by killing monsters or animals, by burning ores and stones in the furnace and mining ores. 
-		With the experience points, tools, armor and weapons can be enchanted or repaired by an anvil and renamed. 
+		Minecraft has an inventory system, so the player can carry a maximum of 36 different stacks of items of between 1, 16 and 64 units depending on the item.
+		In the event of death, all items in the inventory are dropped.
+		After the player respawns, these can be collected again within a limited time (5 minutes).
+		Experience points can be gained by killing monsters or animals, by burning ores and stones in the furnace and mining ores.
+		With the experience points, tools, armor and weapons can be enchanted or repaired by an anvil and renamed.
 		Enchanted items are usually stronger, last longer, or have other effects.
 		<br><br>
-		The laws of physics are partially canceled in the game. 
+		The laws of physics are partially canceled in the game.
 		For example, most blocks are not subject to gravity during construction, but seem to float weightlessly.
-		Water and lava are the only liquids. 
-		They can flow and have a source. 
-		This can be permanently removed by placing a solid block in its place or by removing the source block with a bucket. 
-		Circuits can be built using redstone dust. 
-		This is similar to conductor tracks and is able to transmit signals. 
+		Water and lava are the only liquids.
+		They can flow and have a source.
+		This can be permanently removed by placing a solid block in its place or by removing the source block with a bucket.
+		Circuits can be built using redstone dust.
+		This is similar to conductor tracks and is able to transmit signals.
 		For example, a switch to open a door can be built; and even a simple processor can be modeled in Minecraft.
 	  </h3>
 	</div>
-	  
+
 	  <div class="user-function">
             <button type="button" onclick="location.href = '../post-function/post-comment.html'">Comment</button>
             <button type="button" onclick="location.href = '../post-function/post-screenshot.html'">Screenshot</button>
@@ -96,10 +143,10 @@
 </div>
 <footer>
     <h1>Intro to E-Sports</h1>
-    <p>Intro to E-Sports is a website create by a group of MMU Students namely by the following :-</br>
-    <b>Chua Siong Yong, Suthent Tamilselvam, Yong Sheng Kai, and Tham Kin Lik.</b></br>
-           Without these Amazing Members, this website wouldn't be a success.</br>
-            Once again, I would like to Thank Everyone for their hardwork.</br>
+    <p>Intro to E-Sports is a website create by a group of MMU Students namely by the following :-<br>
+    <b>Chua Siong Yong, Suthent Tamilselvam, Yong Sheng Kai, and Tham Kin Lik.</b><br>
+           Without these Amazing Members, this website wouldn't be a success.<br>
+            Once again, I would like to Thank Everyone for their hardwork.<br>
     </p>
 <nav>
     <div class="footer-tab">

@@ -3,25 +3,51 @@
 <head>
     <title>FAQ</title>
     <link href="../../resource/style/global.css" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="../../resource/style/post7-8/main.css" />
     <script src="../../resource/script/login.js"></script>
+    <script src="../../resource/script/header.js"></script>
     <script>
         function initPage() {
             initLogin();
+            initHeader();
         }
     </script>
 
 </head>
 <body onload="initPage();">
 <header>
-    <div class="header">
-        <h1>=Dummies=</h1>
-        <p>Game Introduction Web Site</p>
-    </div>
+    <a href="../../index.html" class="homepage-navi">
+        <div class="header">
+            <h1>=Dummies=</h1>
+            <p>Game Introduction Web Site</p>
+        </div>
+    </a>
     <div class="navbar">
-        <a href="../login-function/Account-choose.html">Account</a>
-        <a href="../post-function/post-list.html">Post</a>
-        <a href="#" class="right">Other</a>
+        <div class="tab">
+            <div class="collapse-menu white-text">Account</div>
+            <div class="collapse-menu-content">
+                <a class="content-item non-user-function" href="../login-function/login-form.html">Login</a>
+                <a class="content-item non-user-function" href="../login-function/register-form.html">Register</a>
+                <a class="content-item user-admin-function" href="../../index.html" onclick="doLogout();">Logout</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="content-item" href="../post-function/post-list.html">Posts</a>
+        </div>
+
+        <div class="tab admin-function">
+            <a class="content-item" href="../post-function/admin/admin_post_list.html">Admin</a>
+        </div>
+
+        <div class="tab" style="float: right">
+            <div class="collapse-menu white-text">Other</div>
+            <div class="collapse-menu-content">
+                <a class="content-item" href="../other/about-us.html">About us</a>
+                <a class="content-item" href="../other/contact.html">Contact</a>
+                <a class="content-item" href="../other/faq.html">FAQ</a>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -72,7 +98,7 @@
                 <div class="faq_down">
                     <button class="drop"><b>Does E-Sport is safe</b></button>
                     <div class="panel">
-                        <p>Yes, its safe to use</b></p>
+                        <p>Yes, its safe to use</p>
                     </div>
 
                 </div>
@@ -81,15 +107,15 @@
 
         </div>
 
-        <script src="./script.js"></script>
+        <script src="../../resource/script/script.js"></script>
     </div>
 </div>
 <footer>
     <h1>Intro to E-Sports</h1>
-    <p>Intro to E-Sports is a website create by a group of MMU Students namely by the following :-</br>
-    <b>Chua Siong Yong, Suthent Tamilselvam, Yong Sheng Kai, and Tham Kin Lik.</b></br>
-           Without these Amazing Members, this website wouldn't be a success.</br>
-            Once again, I would like to Thank Everyone for their hardwork.</br>
+    <p>Intro to E-Sports is a website create by a group of MMU Students namely by the following :-<br>
+    <b>Chua Siong Yong, Suthent Tamilselvam, Yong Sheng Kai, and Tham Kin Lik.</b><br>
+           Without these Amazing Members, this website wouldn't be a success.<br>
+            Once again, I would like to Thank Everyone for their hardwork.<br>
     </p>
 <nav>
     <div class="footer-tab">
